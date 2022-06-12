@@ -1,7 +1,7 @@
 # Lab №4 MSP. Monitoring and profiling of C/Java code.
 
 ## The task:
->
+
     1. Для своей программы из лабораторной работы #3 по дисциплине "Веб-программирование" реализовать:
 
     MBean, считающий общее число установленных пользователем точек, а также число точек, не попадающих в область. В случае, если количество установленных пользователем точек стало кратно 15, разработанный MBean должен отправлять оповещение об этом событии.
@@ -22,14 +22,14 @@
     Студент должен обеспечить возможность воспроизведения процесса поиска и локализации проблемы по требованию преподавателя.
 
 ## Steps:
->
+
     1. Check this out: https://habr.com/ru/company/oleg-bunin/blog/340394/
     2. Then check this out: https://habr.com/ru/post/482040/
     3. Decide whether we'll be using C or Java.
     4. Decide the stacks we'll be using for profiling and monitoring.
 
 ## Monitoring/Profiling 
->
+
     1. Valgrind toolkit
     2. HeapTrack: Massif Visualizer - very nice for memory profiling (draws dynamic beautiful graphs of memusage)
     3. Hotspot - GUI for perf: https://github.com/KDAB/hotspot 
