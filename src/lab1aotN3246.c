@@ -222,8 +222,8 @@ int main(int argc, char * argv[]) {
     }
 
     FREE:
-        for (int i = 0; i < n_plugs; i++)
-            if (plughandles[i]) dlclose(plughandles[i]);
+        // for (int i = 0; i < n_plugs; i++)
+            // if (plughandles[i]) dlclose(plughandles[i]);
     if (plughandles) free(plughandles);
     //if (user_opts) free(user_opts);
     if (plugin_path_dir) free(plugin_path_dir);

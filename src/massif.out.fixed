@@ -1,0 +1,1505 @@
+desc: --pages-as-heap=yes
+cmd: ./lab1aotN3246 --float-bin 1.5 /home/mertz/.config/
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=4096
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=344945663
+mem_heap_B=11755520
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=502242174
+mem_heap_B=12705792
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=741019993
+mem_heap_B=26578944
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=1095856039
+mem_heap_B=26906624
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1390637363
+mem_heap_B=30248960
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 30248960 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 23240704 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 23240704 0x49734A7: mmap (mmap64.c:46)
+   n1: 23240704 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 23240704 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 23240704 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 23240704 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 23240704 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 23240704 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 23240704 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 23240704 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 18391040 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 18391040 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 18391040 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 18391040 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 18391040 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 18391040 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 18391040 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 18391040 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 18391040 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 18391040 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+             n0: 0 in 1 place, below massif's threshold (1.00%)
+           n1: 4849664 0x496C415: ftw_startup (ftw.c:771)
+            n0: 4849664 0x109784: main (lab1aotN3246.c:218)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n3: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7E: ???
+                 n1: 2146304 0x1FFF000A8D: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 946176 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 946176 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+           n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 946176 0x400D03A: dl_open_worker (dl-open.c:782)
+             n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+              n1: 946176 0x400D42C: _dl_open (dl-open.c:883)
+               n1: 946176 0x48F063B: dlopen_doit (dlopen.c:56)
+                n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                 n1: 946176 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                  n1: 946176 0x48F010E: _dlerror_run (dlerror.c:138)
+                   n1: 946176 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                    n1: 946176 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                     n1: 946176 0x1099F1: plug_info (lab1aotN3246.c:260)
+                      n1: 946176 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                       n1: 946176 0x496BAC2: ftw_dir (ftw.c:551)
+                        n1: 946176 0x496C415: ftw_startup (ftw.c:771)
+                         n0: 946176 0x109249: main (lab1aotN3246.c:122)
+       n1: 331776 0x400D878: dl_open_worker_begin (dl-open.c:534)
+        n1: 331776 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 331776 0x400D03A: dl_open_worker (dl-open.c:782)
+          n1: 331776 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+           n1: 331776 0x400D42C: _dl_open (dl-open.c:883)
+            n1: 331776 0x48F063B: dlopen_doit (dlopen.c:56)
+             n1: 331776 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+              n1: 331776 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+               n1: 331776 0x48F010E: _dlerror_run (dlerror.c:138)
+                n1: 331776 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                 n1: 331776 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                  n1: 331776 0x1099F1: plug_info (lab1aotN3246.c:260)
+                   n1: 331776 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                    n1: 331776 0x496BAC2: ftw_dir (ftw.c:551)
+                     n0: 331776 in 2 places, all below massif's threshold (1.00%)
+       n0: 20480 in 1 place, below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7E: ???
+                n1: 1925120 0x1FFF000A8D: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 888832 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 888832 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+          n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+           n1: 888832 0x400D03A: dl_open_worker (dl-open.c:782)
+            n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+             n1: 888832 0x400D42C: _dl_open (dl-open.c:883)
+              n1: 888832 0x48F063B: dlopen_doit (dlopen.c:56)
+               n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                n1: 888832 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                 n1: 888832 0x48F010E: _dlerror_run (dlerror.c:138)
+                  n1: 888832 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                   n1: 888832 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                    n1: 888832 0x1099F1: plug_info (lab1aotN3246.c:260)
+                     n1: 888832 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                      n1: 888832 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 888832 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 888832 0x109249: main (lab1aotN3246.c:122)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n1: 319488 0x496F68B: brk (brk.c:37)
+  n1: 319488 0x496F754: sbrk (sbrk.c:74)
+   n1: 319488 0x49019B5: __glibc_morecore (morecore.c:29)
+    n1: 319488 0x4902929: sysmalloc (malloc.c:2727)
+     n1: 319488 0x4903A59: _int_malloc (malloc.c:4407)
+      n0: 319488 in 2 places, all below massif's threshold (1.00%)
+ n0: 274432 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=1590232404
+mem_heap_B=33099776
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1823176312
+mem_heap_B=31510528
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2037025396
+mem_heap_B=31842304
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2220359582
+mem_heap_B=37203968
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=2448015980
+mem_heap_B=48979968
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 48979968 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 41971712 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 41971712 0x49734A7: mmap (mmap64.c:46)
+   n1: 41971712 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 41971712 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 41971712 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 41971712 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 41971712 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 41971712 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 41971712 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 41971712 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 37122048 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 37122048 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 37122048 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 37122048 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 37122048 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 37122048 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 37122048 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 37122048 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 37122048 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 37122048 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+             n0: 0 in 1 place, below massif's threshold (1.00%)
+           n1: 4849664 0x496C415: ftw_startup (ftw.c:771)
+            n0: 4849664 0x109784: main (lab1aotN3246.c:218)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7E: ???
+                 n1: 2146304 0x1FFF000A8D: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 946176 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 946176 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+           n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 946176 0x400D03A: dl_open_worker (dl-open.c:782)
+             n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+              n1: 946176 0x400D42C: _dl_open (dl-open.c:883)
+               n1: 946176 0x48F063B: dlopen_doit (dlopen.c:56)
+                n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                 n1: 946176 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                  n1: 946176 0x48F010E: _dlerror_run (dlerror.c:138)
+                   n1: 946176 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                    n1: 946176 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                     n1: 946176 0x1099F1: plug_info (lab1aotN3246.c:260)
+                      n1: 946176 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                       n1: 946176 0x496BAC2: ftw_dir (ftw.c:551)
+                        n1: 946176 0x496C415: ftw_startup (ftw.c:771)
+                         n0: 946176 0x109249: main (lab1aotN3246.c:122)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7E: ???
+                n1: 1925120 0x1FFF000A8D: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 888832 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 888832 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+          n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+           n1: 888832 0x400D03A: dl_open_worker (dl-open.c:782)
+            n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+             n1: 888832 0x400D42C: _dl_open (dl-open.c:883)
+              n1: 888832 0x48F063B: dlopen_doit (dlopen.c:56)
+               n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                n1: 888832 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                 n1: 888832 0x48F010E: _dlerror_run (dlerror.c:138)
+                  n1: 888832 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                   n1: 888832 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                    n1: 888832 0x1099F1: plug_info (lab1aotN3246.c:260)
+                     n1: 888832 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                      n1: 888832 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 888832 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 888832 0x109249: main (lab1aotN3246.c:122)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n0: 593920 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=2831948362
+mem_heap_B=54919168
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 54919168 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 47910912 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 47910912 0x49734A7: mmap (mmap64.c:46)
+   n1: 47910912 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 47910912 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 47910912 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 47910912 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 47910912 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 47910912 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 47910912 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 47910912 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 43061248 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 43061248 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 43061248 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 43061248 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 43061248 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 43061248 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 43061248 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 43061248 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 43061248 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 43061248 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+             n0: 0 in 1 place, below massif's threshold (1.00%)
+           n1: 4849664 0x496C415: ftw_startup (ftw.c:771)
+            n0: 4849664 0x109784: main (lab1aotN3246.c:218)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7E: ???
+                 n1: 2146304 0x1FFF000A8D: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 946176 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 946176 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+           n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 946176 0x400D03A: dl_open_worker (dl-open.c:782)
+             n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+              n1: 946176 0x400D42C: _dl_open (dl-open.c:883)
+               n1: 946176 0x48F063B: dlopen_doit (dlopen.c:56)
+                n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                 n1: 946176 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                  n1: 946176 0x48F010E: _dlerror_run (dlerror.c:138)
+                   n1: 946176 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                    n1: 946176 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                     n1: 946176 0x1099F1: plug_info (lab1aotN3246.c:260)
+                      n1: 946176 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                       n1: 946176 0x496BAC2: ftw_dir (ftw.c:551)
+                        n1: 946176 0x496C415: ftw_startup (ftw.c:771)
+                         n0: 946176 0x109249: main (lab1aotN3246.c:122)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7E: ???
+                n1: 1925120 0x1FFF000A8D: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 888832 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 888832 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+          n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+           n1: 888832 0x400D03A: dl_open_worker (dl-open.c:782)
+            n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+             n1: 888832 0x400D42C: _dl_open (dl-open.c:883)
+              n1: 888832 0x48F063B: dlopen_doit (dlopen.c:56)
+               n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                n1: 888832 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                 n1: 888832 0x48F010E: _dlerror_run (dlerror.c:138)
+                  n1: 888832 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                   n1: 888832 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                    n1: 888832 0x1099F1: plug_info (lab1aotN3246.c:260)
+                     n1: 888832 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                      n1: 888832 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 888832 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 888832 0x109249: main (lab1aotN3246.c:122)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n0: 593920 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=3151163439
+mem_heap_B=55033856
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=3397370155
+mem_heap_B=55083008
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=3728240608
+mem_heap_B=58396672
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=3982736360
+mem_heap_B=58331136
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=4135988335
+mem_heap_B=60178432
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=4440868763
+mem_heap_B=63086592
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=4660606513
+mem_heap_B=63102976
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=4825002793
+mem_heap_B=71933952
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=5063786520
+mem_heap_B=68300800
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=5270313871
+mem_heap_B=91344896
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 91344896 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 84402176 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 84402176 0x49734A7: mmap (mmap64.c:46)
+   n1: 84402176 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 84402176 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 84402176 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 84402176 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 84402176 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 84402176 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 84402176 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 84402176 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 55963648 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 55963648 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 55963648 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 55963648 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 55808000 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 55808000 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 55808000 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 55808000 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 52277248 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 52277248 0x109784: main (lab1aotN3246.c:218)
+                   n1: 3530752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 3530752 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 3530752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 3530752 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 3530752 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 3530752 0x109784: main (lab1aotN3246.c:218)
+                       n0: 0 in 1 place, below massif's threshold (1.00%)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 155648 in 1 place, below massif's threshold (1.00%)
+             n0: 0 in 1 place, below massif's threshold (1.00%)
+           n1: 28438528 0x496C415: ftw_startup (ftw.c:771)
+            n0: 28438528 0x109784: main (lab1aotN3246.c:218)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7E: ???
+                 n1: 2146304 0x1FFF000A8D: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 946176 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 946176 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+           n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 946176 0x400D03A: dl_open_worker (dl-open.c:782)
+             n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+              n1: 946176 0x400D42C: _dl_open (dl-open.c:883)
+               n1: 946176 0x48F063B: dlopen_doit (dlopen.c:56)
+                n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                 n1: 946176 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                  n1: 946176 0x48F010E: _dlerror_run (dlerror.c:138)
+                   n1: 946176 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                    n1: 946176 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                     n1: 946176 0x1099F1: plug_info (lab1aotN3246.c:260)
+                      n1: 946176 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                       n1: 946176 0x496BAC2: ftw_dir (ftw.c:551)
+                        n1: 946176 0x496C415: ftw_startup (ftw.c:771)
+                         n0: 946176 0x109249: main (lab1aotN3246.c:122)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7E: ???
+                n1: 1925120 0x1FFF000A8D: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n0: 888832 in 1 place, below massif's threshold (1.00%)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n0: 528384 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=5653503376
+mem_heap_B=77221888
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=6082620341
+mem_heap_B=84561920
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=6251102031
+mem_heap_B=76431360
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=6522827732
+mem_heap_B=80359424
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 80359424 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 73416704 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 73416704 0x49734A7: mmap (mmap64.c:46)
+   n1: 73416704 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 73416704 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 73416704 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 73416704 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 73416704 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 73416704 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 73416704 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 73416704 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 64376832 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 64376832 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 56041472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 56041472 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 55885824 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 55885824 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 55808000 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 55808000 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 52277248 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 52277248 0x109784: main (lab1aotN3246.c:218)
+                   n1: 3530752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 3530752 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 3530752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 3530752 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 3530752 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 3530752 0x109784: main (lab1aotN3246.c:218)
+                       n0: 0 in 1 place, below massif's threshold (1.00%)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 77824 in 1 place, below massif's threshold (1.00%)
+               n0: 155648 in 1 place, below massif's threshold (1.00%)
+             n1: 8335360 0x496C415: ftw_startup (ftw.c:771)
+              n0: 8335360 0x109784: main (lab1aotN3246.c:218)
+           n1: 9039872 0x496C415: ftw_startup (ftw.c:771)
+            n0: 9039872 0x109784: main (lab1aotN3246.c:218)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7E: ???
+                 n1: 2146304 0x1FFF000A8D: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 946176 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 946176 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+           n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 946176 0x400D03A: dl_open_worker (dl-open.c:782)
+             n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+              n1: 946176 0x400D42C: _dl_open (dl-open.c:883)
+               n1: 946176 0x48F063B: dlopen_doit (dlopen.c:56)
+                n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                 n1: 946176 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                  n1: 946176 0x48F010E: _dlerror_run (dlerror.c:138)
+                   n1: 946176 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                    n1: 946176 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                     n1: 946176 0x1099F1: plug_info (lab1aotN3246.c:260)
+                      n1: 946176 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                       n1: 946176 0x496BAC2: ftw_dir (ftw.c:551)
+                        n1: 946176 0x496C415: ftw_startup (ftw.c:771)
+                         n0: 946176 0x109249: main (lab1aotN3246.c:122)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7E: ???
+                n1: 1925120 0x1FFF000A8D: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 888832 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 888832 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+          n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+           n1: 888832 0x400D03A: dl_open_worker (dl-open.c:782)
+            n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+             n1: 888832 0x400D42C: _dl_open (dl-open.c:883)
+              n1: 888832 0x48F063B: dlopen_doit (dlopen.c:56)
+               n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                n1: 888832 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                 n1: 888832 0x48F010E: _dlerror_run (dlerror.c:138)
+                  n1: 888832 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                   n1: 888832 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                    n1: 888832 0x1099F1: plug_info (lab1aotN3246.c:260)
+                     n1: 888832 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                      n1: 888832 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 888832 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 888832 0x109249: main (lab1aotN3246.c:122)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n0: 528384 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=6812801504
+mem_heap_B=76623872
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=6959171504
+mem_heap_B=87093248
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=7260174763
+mem_heap_B=83881984
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=7585770950
+mem_heap_B=76668928
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=7857065414
+mem_heap_B=76668928
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=8233606351
+mem_heap_B=76681216
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=8428202061
+mem_heap_B=78340096
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=8627153306
+mem_heap_B=77643776
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 77643776 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 70569984 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 70569984 0x49734A7: mmap (mmap64.c:46)
+   n1: 70569984 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 70569984 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 70569984 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 70569984 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 70569984 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 70569984 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 70569984 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 69578752 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 64724992 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 64376832 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 56041472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 56041472 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 55885824 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 55885824 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 55808000 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 55808000 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 52277248 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 52277248 0x109784: main (lab1aotN3246.c:218)
+                   n1: 3530752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 3530752 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 3530752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 3530752 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 3530752 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 3530752 0x109784: main (lab1aotN3246.c:218)
+                       n0: 0 in 1 place, below massif's threshold (1.00%)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 77824 in 1 place, below massif's threshold (1.00%)
+               n0: 155648 in 1 place, below massif's threshold (1.00%)
+             n1: 8335360 0x496C415: ftw_startup (ftw.c:771)
+              n0: 8335360 0x109784: main (lab1aotN3246.c:218)
+            n0: 348160 in 1 place, below massif's threshold (1.00%)
+           n1: 4853760 0x496C415: ftw_startup (ftw.c:771)
+            n0: 4853760 0x109784: main (lab1aotN3246.c:218)
+          n1: 991232 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 991232 0x496C415: ftw_startup (ftw.c:771)
+            n0: 991232 0x109784: main (lab1aotN3246.c:218)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7E: ???
+                 n1: 2146304 0x1FFF000A8D: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 946176 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 946176 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+           n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 946176 0x400D03A: dl_open_worker (dl-open.c:782)
+             n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+              n1: 946176 0x400D42C: _dl_open (dl-open.c:883)
+               n1: 946176 0x48F063B: dlopen_doit (dlopen.c:56)
+                n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                 n1: 946176 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                  n1: 946176 0x48F010E: _dlerror_run (dlerror.c:138)
+                   n1: 946176 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                    n1: 946176 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                     n1: 946176 0x1099F1: plug_info (lab1aotN3246.c:260)
+                      n1: 946176 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                       n1: 946176 0x496BAC2: ftw_dir (ftw.c:551)
+                        n1: 946176 0x496C415: ftw_startup (ftw.c:771)
+                         n0: 946176 0x109249: main (lab1aotN3246.c:122)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7E: ???
+                n1: 1925120 0x1FFF000A8D: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 888832 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 888832 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+          n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+           n1: 888832 0x400D03A: dl_open_worker (dl-open.c:782)
+            n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+             n1: 888832 0x400D42C: _dl_open (dl-open.c:883)
+              n1: 888832 0x48F063B: dlopen_doit (dlopen.c:56)
+               n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                n1: 888832 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                 n1: 888832 0x48F010E: _dlerror_run (dlerror.c:138)
+                  n1: 888832 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                   n1: 888832 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                    n1: 888832 0x1099F1: plug_info (lab1aotN3246.c:260)
+                     n1: 888832 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                      n1: 888832 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 888832 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 888832 0x109249: main (lab1aotN3246.c:122)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n0: 659456 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=8921325183
+mem_heap_B=88899584
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=9169563151
+mem_heap_B=110112768
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 110112768 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 103038976 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 103038976 0x49734A7: mmap (mmap64.c:46)
+   n1: 103038976 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 103038976 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 103038976 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 103038976 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 103038976 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 103038976 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 103038976 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 102481920 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 97628160 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 64376832 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 56041472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 56041472 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 55885824 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 55885824 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 55808000 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 55808000 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 52277248 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 52277248 0x109784: main (lab1aotN3246.c:218)
+                   n1: 3530752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 3530752 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 3530752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 3530752 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 3530752 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 3530752 0x109784: main (lab1aotN3246.c:218)
+                       n0: 0 in 1 place, below massif's threshold (1.00%)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 77824 in 1 place, below massif's threshold (1.00%)
+               n0: 155648 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+             n1: 8335360 0x496C415: ftw_startup (ftw.c:771)
+              n0: 8335360 0x109784: main (lab1aotN3246.c:218)
+            n1: 33251328 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 33251328 0x496C415: ftw_startup (ftw.c:771)
+              n0: 33251328 0x109784: main (lab1aotN3246.c:218)
+           n1: 4853760 0x496C415: ftw_startup (ftw.c:771)
+            n0: 4853760 0x109784: main (lab1aotN3246.c:218)
+          n0: 557056 in 1 place, below massif's threshold (1.00%)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7E: ???
+                 n1: 2146304 0x1FFF000A8D: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n0: 946176 in 1 place, below massif's threshold (1.00%)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7E: ???
+                n1: 1925120 0x1FFF000A8D: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n0: 888832 in 1 place, below massif's threshold (1.00%)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n0: 659456 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=9551255532
+mem_heap_B=135757824
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=9844965803
+mem_heap_B=150282240
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 150282240 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 143208448 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 143208448 0x49734A7: mmap (mmap64.c:46)
+   n1: 143208448 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 143208448 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 143208448 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 143208448 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 143208448 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 143208448 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 143208448 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 142651392 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 137797632 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 81207296 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 72871936 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 56041472 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 55885824 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 55885824 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 55808000 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 55808000 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 52277248 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 52277248 0x109784: main (lab1aotN3246.c:218)
+                   n1: 3530752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 3530752 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 3530752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 3530752 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 3530752 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 3530752 0x109784: main (lab1aotN3246.c:218)
+                       n0: 0 in 1 place, below massif's threshold (1.00%)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 77824 in 1 place, below massif's threshold (1.00%)
+               n0: 155648 in 1 place, below massif's threshold (1.00%)
+              n1: 16830464 0x496BAFC: ftw_dir (ftw.c:582)
+               n1: 16830464 0x496C415: ftw_startup (ftw.c:771)
+                n0: 16830464 0x109784: main (lab1aotN3246.c:218)
+             n1: 8335360 0x496C415: ftw_startup (ftw.c:771)
+              n0: 8335360 0x109784: main (lab1aotN3246.c:218)
+            n1: 56590336 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 56590336 0x496C415: ftw_startup (ftw.c:771)
+              n0: 56590336 0x109784: main (lab1aotN3246.c:218)
+           n1: 4853760 0x496C415: ftw_startup (ftw.c:771)
+            n0: 4853760 0x109784: main (lab1aotN3246.c:218)
+          n0: 557056 in 1 place, below massif's threshold (1.00%)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7E: ???
+                 n1: 2146304 0x1FFF000A8D: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n0: 946176 in 1 place, below massif's threshold (1.00%)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7E: ???
+                n1: 1925120 0x1FFF000A8D: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n0: 888832 in 1 place, below massif's threshold (1.00%)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n0: 659456 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=10049402462
+mem_heap_B=140435456
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=10311092344
+mem_heap_B=157122560
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 157122560 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 150048768 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 150048768 0x49734A7: mmap (mmap64.c:46)
+   n1: 150048768 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 150048768 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 150048768 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 150048768 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 150048768 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 150048768 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 150048768 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 149491712 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 144637952 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 88047616 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 79712256 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 69177344 0x496BAC2: ftw_dir (ftw.c:551)
+               n2: 69021696 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 69021696 0x496BAC2: ftw_dir (ftw.c:551)
+                 n2: 68943872 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 68939776 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 52277248 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 52277248 0x109784: main (lab1aotN3246.c:218)
+                   n2: 16662528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 16662528 0x496BAC2: ftw_dir (ftw.c:551)
+                     n2: 16662528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 10096640 0x496BAC2: ftw_dir (ftw.c:551)
+                       n2: 6565888 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                        n1: 6565888 0x496BAFC: ftw_dir (ftw.c:582)
+                         n1: 6565888 0x496C415: ftw_startup (ftw.c:771)
+                          n0: 6565888 0x109784: main (lab1aotN3246.c:218)
+                        n0: 0 in 1 place, below massif's threshold (1.00%)
+                       n1: 3530752 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 3530752 0x109784: main (lab1aotN3246.c:218)
+                      n1: 6565888 0x496BAFC: ftw_dir (ftw.c:582)
+                       n1: 6565888 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 6565888 0x109784: main (lab1aotN3246.c:218)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+                    n0: 0 in 1 place, below massif's threshold (1.00%)
+                  n0: 4096 in 1 place, below massif's threshold (1.00%)
+                 n0: 77824 in 1 place, below massif's threshold (1.00%)
+                n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 155648 in 1 place, below massif's threshold (1.00%)
+              n1: 10534912 0x496BAFC: ftw_dir (ftw.c:582)
+               n1: 10534912 0x496C415: ftw_startup (ftw.c:771)
+                n0: 10534912 0x109784: main (lab1aotN3246.c:218)
+             n1: 8335360 0x496C415: ftw_startup (ftw.c:771)
+              n0: 8335360 0x109784: main (lab1aotN3246.c:218)
+            n1: 56590336 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 56590336 0x496C415: ftw_startup (ftw.c:771)
+              n0: 56590336 0x109784: main (lab1aotN3246.c:218)
+           n1: 4853760 0x496C415: ftw_startup (ftw.c:771)
+            n0: 4853760 0x109784: main (lab1aotN3246.c:218)
+          n0: 557056 in 1 place, below massif's threshold (1.00%)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7E: ???
+                 n1: 2146304 0x1FFF000A8D: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n0: 946176 in 1 place, below massif's threshold (1.00%)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7E: ???
+                n1: 1925120 0x1FFF000A8D: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n0: 888832 in 1 place, below massif's threshold (1.00%)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n0: 659456 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=10626823238
+mem_heap_B=213716992
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=10917988148
+mem_heap_B=225927168
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=11123635206
+mem_heap_B=223162368
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=11347611654
+mem_heap_B=223952896
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=11557678558
+mem_heap_B=224624640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=11750988264
+mem_heap_B=225914880
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=12081281863
+mem_heap_B=232050688
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=peak
+n3: 232050688 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 224976896 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 224976896 0x49734A7: mmap (mmap64.c:46)
+   n1: 224976896 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 224976896 0x109DB5: check_func (lab1aotN3246.c:373)
+     n2: 224976896 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 224976896 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 224976896 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 224976896 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 224976896 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 224419840 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 219566080 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 162975744 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 154640384 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 79577088 0x496BAC2: ftw_dir (ftw.c:551)
+               n2: 79421440 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 69017600 0x496BAC2: ftw_dir (ftw.c:551)
+                 n2: 68939776 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 68939776 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 52277248 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 52277248 0x109784: main (lab1aotN3246.c:218)
+                   n2: 16662528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 16662528 0x496BAC2: ftw_dir (ftw.c:551)
+                     n2: 16662528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 10096640 0x496BAC2: ftw_dir (ftw.c:551)
+                       n2: 6565888 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                        n1: 6565888 0x496BAFC: ftw_dir (ftw.c:582)
+                         n1: 6565888 0x496C415: ftw_startup (ftw.c:771)
+                          n0: 6565888 0x109784: main (lab1aotN3246.c:218)
+                        n0: 0 in 1 place, below massif's threshold (1.00%)
+                       n1: 3530752 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 3530752 0x109784: main (lab1aotN3246.c:218)
+                      n1: 6565888 0x496BAFC: ftw_dir (ftw.c:582)
+                       n1: 6565888 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 6565888 0x109784: main (lab1aotN3246.c:218)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+                    n0: 0 in 1 place, below massif's threshold (1.00%)
+                  n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 77824 in 1 place, below massif's threshold (1.00%)
+                n1: 10403840 0x496BAFC: ftw_dir (ftw.c:582)
+                 n1: 10403840 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 10403840 0x109784: main (lab1aotN3246.c:218)
+               n0: 155648 in 1 place, below massif's threshold (1.00%)
+              n1: 75063296 0x496BAFC: ftw_dir (ftw.c:582)
+               n1: 75063296 0x496C415: ftw_startup (ftw.c:771)
+                n0: 75063296 0x109784: main (lab1aotN3246.c:218)
+             n1: 8335360 0x496C415: ftw_startup (ftw.c:771)
+              n0: 8335360 0x109784: main (lab1aotN3246.c:218)
+            n1: 56590336 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 56590336 0x496C415: ftw_startup (ftw.c:771)
+              n0: 56590336 0x109784: main (lab1aotN3246.c:218)
+           n1: 4853760 0x496C415: ftw_startup (ftw.c:771)
+            n0: 4853760 0x109784: main (lab1aotN3246.c:218)
+          n0: 557056 in 1 place, below massif's threshold (1.00%)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n1: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n0: 3092480 in 2 places, all below massif's threshold (1.00%)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n1: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n0: 2813952 in 2 places, all below massif's threshold (1.00%)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n0: 659456 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=12372756118
+mem_heap_B=222920704
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=12711128365
+mem_heap_B=229122048
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=12939133505
+mem_heap_B=226029568
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=13109847881
+mem_heap_B=228454400
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=13257667353
+mem_heap_B=224030720
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 224030720 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 216956928 0x49734A7: __mmap64 (mmap64.c:58)
+  n1: 216956928 0x49734A7: mmap (mmap64.c:46)
+   n1: 216956928 0x4849B96: plugin_process_file (floatbin.c:230)
+    n1: 216956928 0x109DB5: check_func (lab1aotN3246.c:373)
+     n2: 216956928 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 216956928 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 216956928 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 216956928 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 216956928 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 216399872 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 211546112 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 152645632 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 144310272 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 75063296 0x496BAFC: ftw_dir (ftw.c:582)
+               n1: 75063296 0x496C415: ftw_startup (ftw.c:771)
+                n0: 75063296 0x109784: main (lab1aotN3246.c:218)
+              n2: 69246976 0x496BAC2: ftw_dir (ftw.c:551)
+               n2: 69091328 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 69017600 0x496BAC2: ftw_dir (ftw.c:551)
+                 n2: 68939776 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 68939776 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 52277248 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 52277248 0x109784: main (lab1aotN3246.c:218)
+                   n2: 16662528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 16662528 0x496BAC2: ftw_dir (ftw.c:551)
+                     n2: 16662528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 10096640 0x496BAC2: ftw_dir (ftw.c:551)
+                       n2: 6565888 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                        n1: 6565888 0x496BAFC: ftw_dir (ftw.c:582)
+                         n1: 6565888 0x496C415: ftw_startup (ftw.c:771)
+                          n0: 6565888 0x109784: main (lab1aotN3246.c:218)
+                        n0: 0 in 1 place, below massif's threshold (1.00%)
+                       n1: 3530752 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 3530752 0x109784: main (lab1aotN3246.c:218)
+                      n1: 6565888 0x496BAFC: ftw_dir (ftw.c:582)
+                       n1: 6565888 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 6565888 0x109784: main (lab1aotN3246.c:218)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+                    n0: 0 in 1 place, below massif's threshold (1.00%)
+                  n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 77824 in 1 place, below massif's threshold (1.00%)
+                n0: 73728 in 1 place, below massif's threshold (1.00%)
+               n0: 155648 in 1 place, below massif's threshold (1.00%)
+             n1: 8335360 0x496C415: ftw_startup (ftw.c:771)
+              n0: 8335360 0x109784: main (lab1aotN3246.c:218)
+            n1: 58900480 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 58900480 0x496C415: ftw_startup (ftw.c:771)
+              n0: 58900480 0x109784: main (lab1aotN3246.c:218)
+           n1: 4853760 0x496C415: ftw_startup (ftw.c:771)
+            n0: 4853760 0x109784: main (lab1aotN3246.c:218)
+          n0: 557056 in 1 place, below massif's threshold (1.00%)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n1: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n0: 3092480 in 2 places, all below massif's threshold (1.00%)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n1: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n0: 2813952 in 2 places, all below massif's threshold (1.00%)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n0: 659456 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=13411686924
+mem_heap_B=227188736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=13559913907
+mem_heap_B=225550336
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

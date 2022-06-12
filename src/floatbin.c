@@ -22,6 +22,35 @@
 
 #include "plugin_api.h"
 
+/*
+ * The memmem() function finds the start of the first occurrence of the
+ * substring 'needle' of length 'nlen' in the memory area 'haystack' of
+ * length 'hlen'.
+ *
+ * The return value is a pointer to the beginning of the sub-fileContents, or
+ * NULL if the substring is not found.
+ */
+void * memmem(const void * haystack, size_t hlen,
+    const void * needle, size_t nlen) {
+    int needle_first;
+    const void * p = haystack;
+    size_t plen = hlen;
+
+    if (!nlen)
+        return NULL;
+
+    needle_first = * (unsigned char * ) needle;
+
+    while (plen >= nlen && (p = memchr(p, needle_first, plen - nlen + 1))) {
+        if (!memcmp(p, needle, nlen))
+            return (void * ) p;
+
+        p++;
+        plen = hlen - (p - haystack);
+    }
+
+    return NULL;
+}
 
 char big_end[33] = {
   0
@@ -46,25 +75,6 @@ static struct plugin_option lon_op_arr[] = {
     "looking for float numbers in file"
   },
 };
-//Ñ„Ð°Ð¹Ð»Ð¾Ð²Ñ‹Ðµ Ð±Ð°Ð¹Ñ‚Ñ‹ Ð² ÑÑ‚Ñ€Ð¾ÐºÑƒ
-/*char* filebytetostring_bin(char *input,int len){
-    char *tmp=calloc(len*8+1,sizeof(char));
-    char n;
-    for (int i=0,m=8;i<m && m<len;i++)
-    {
-        n=input[i];
-        for(int j=0;j<8;j++) // Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐµÐ¼ strncat Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ðº ÑÑ‚Ñ€Ð¾ÐºÐµ "Ð½Ð° Ð²Ñ‹Ñ…Ð¾Ð´" Ð¿Ñ€Ð¸Ð¿Ð¸ÑÑ‹Ð²Ð°Ñ‚ÑŒ Ñ†Ð¸Ñ„Ñ€Ñ‹ Ð²Ð¾ Ð²Ñ€ÐµÐ¼Ñ Ð¿Ñ€Ð¾Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ Ñ†Ð¸ÐºÐ»Ð°
-        {
-            if(n & 0x80000000)
-                strncat(tmp, "1", 2);
-            else
-                strncat(tmp, "0", 2);
-            n<<=1;
-        }
-    }
-    return tmp;
-}
-*/
 //int plugin_get_info
 int plugin_get_info(struct plugin_info * ppi) {
   if (!ppi) {
@@ -106,6 +116,29 @@ void convert(char * chislo) {
     }
   }
 }
+
+char * change_endianness(char * buf) {
+   char * DEBUG = getenv("LAB1DEBUG");
+    char * resultChar = malloc(5);
+    if (resultChar) {
+        resultChar[4] = 0;
+        resultChar[0] = buf[3]; // move byte 3 to byte 0
+        resultChar[1] = buf[2]; // move byte 1 to byte 2
+        resultChar[2] = buf[1]; // move byte 2 to byte 1
+        resultChar[3] = buf[0]; // byte 0 to byte 3
+
+        if (DEBUG)
+            printf("DEBUG: %s: Endianness is changed successfully\n", lib_name);
+
+        return resultChar;
+    } else {
+        if (DEBUG)
+            printf("DEBUG: %s: memory allocation failed", lib_name);
+        return NULL;
+    }
+}
+
+
 //KMP algorythm
 int KMPAlg(char * string, char * substring, int N, int M) {
   int ret = -1;
@@ -140,6 +173,7 @@ int KMPAlg(char * string, char * substring, int N, int M) {
   } else
     return ret; // Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¾ÑˆÐ¸Ð±ÐºÑƒ 
 }
+
 //int plugin_process_file
 int plugin_process_file(const char * fname, struct option in_opts[], size_t in_opts_len) {
   char * datfloat = NULL;
@@ -191,7 +225,7 @@ int plugin_process_file(const char * fname, struct option in_opts[], size_t in_o
     goto END;
   }
 
-  convert(datfloat); // Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð¼ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ little_end Ð¸ big_end
+  float floatBin_ = atof(datfloat); // Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð¼ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ little_end Ð¸ big_end
 
   file_p = mmap(NULL, st.st_size, PROT_WRITE, MAP_PRIVATE, fd, 0); //Ð¾Ñ‚Ð¾Ð±Ñ€Ð°Ð¶Ð°ÐµÐ¼ Ñ„Ð°Ð¹Ð» Ð½Ð° Ð¾Ð¿ÐµÑ€Ð°Ñ‚Ð¸Ð²Ð½ÑƒÑŽ Ð¿Ð°Ð¼ÑÑ‚ÑŒ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ ÐµÐ³Ð¾ "Ñ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ" (#include <sys/mman.h>)
   if (file_p == MAP_FAILED) {
@@ -199,54 +233,41 @@ int plugin_process_file(const char * fname, struct option in_opts[], size_t in_o
     return ret;
   }
 
-  char * tmp = calloc(st.st_size * 8 + 1, sizeof(char));
-  char n;
-  int i = 0;
-  int m = 256;
-  for (; i < m && m < st.st_size; i++) {
+  char * last_needle = NULL;
+  char * last_needle_swapped = NULL;
+  char * tmpFile = file_p;
+  char *floatBinNewEnd = change_endianness((char*)&floatBin_);
 
-    n = file_p[i];
-    for (int j = 0; j < 8; j++) {
-      if (n & 0x80000000)
-        strncat(tmp, "1", 2);
-      else
-        strncat(tmp, "0", 2);
-      n <<= 1;
-
-    }
-  }
-  filebinary_p = tmp;
-  int big_end_chislo_found = KMPAlg(filebinary_p, big_end, st.st_size * 8, 32);
-  int lit_end_chislo_found = KMPAlg(filebinary_p, little_end, st.st_size * 8, 32);
-
-  if (big_end_chislo_found == st.st_size) {
-    ret = 1;
-  } else {
-    ret = 0;
+  while (1) {
+    char * p = memmem(file_p, st.st_size, (void*)&floatBin_, 4);
+    if (!p) break;
+    last_needle = p;
+    st.st_size -= (p + 4) - file_p;
+    file_p= p + 4;
   }
 
-  if (DEBUG && ret == 0) {
-    fprintf(stderr, "DEBUG: %s: Ð½Ð°Ð¹Ð´ÐµÐ½ %s big-endian Ð² %s\n", lib_name, big_end, fname);
-
+  file_p = tmpFile;
+  while (1) {
+    char * pp = memmem(file_p, st.st_size, floatBinNewEnd, 4);
+    if (!pp) break;
+    last_needle_swapped = pp;
+    st.st_size -= (pp + 4) - file_p;
+    file_p = pp + 4;
   }
-  if (ret != 0) {
-    if (lit_end_chislo_found == st.st_size) {
+
+    if (last_needle == NULL && last_needle_swapped == NULL) {
+      // if (DEBUG)
+          // printf("DEBUG: %s: Provided IPv4 address { %s } is NOT FOUND in { %s } file", lib_name, ipv4_bytes, input_file);
       ret = 1;
-    } else ret = 0;
-
-  }
-  if (DEBUG && ret == 0) {
-    fprintf(stderr, "DEBUG: %s: Ð½Ð°Ð¹Ð´ÐµÐ½ %s little-endian Ð² %s\n", lib_name, little_end, fname);
-
+  } else {
+      // if (DEBUG)
+          // printf("DEBUG: %s: Provided IPv4 address { %s } is FOUND in { %s } file", lib_name, ipv4_bytes, input_file);
+      ret = 0;
   }
 
-  if (DEBUG && ret == 1) {
-    fprintf(stderr, "DEBUG: %s: Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾!\n", lib_name);
-
-  }
-
+ 
   munmap(file_p, st.st_size);
-
+  if(floatBinNewEnd) free(floatBinNewEnd);
   //END
   END:
     if (fd) {

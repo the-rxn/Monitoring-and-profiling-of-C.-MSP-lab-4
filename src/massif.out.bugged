@@ -1,0 +1,2958 @@
+desc: --pages-as-heap=yes
+cmd: ./lab1aotN3246 --bug-float-bin 1.5 /home/mertz/.config/
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=4096
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=3210345711
+mem_heap_B=64753664
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 64753664 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 56705024 0x49734A7: __mmap64 (mmap64.c:58)
+  n2: 56705024 0x49734A7: mmap (mmap64.c:46)
+   n1: 47976448 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 47976448 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 47976448 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 47976448 0x4905240: calloc (malloc.c:3679)
+       n1: 47976448 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 47976448 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 47976448 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 47976448 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 47976448 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 47976448 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 47976448 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 47976448 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 47976448 0x496C415: ftw_startup (ftw.c:771)
+                n0: 47976448 0x109784: main (lab1aotN3246.c:218)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 8728576 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 8728576 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 8728576 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 8728576 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 8695808 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 8695808 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 8519680 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 8519680 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 7106560 0x496C415: ftw_startup (ftw.c:771)
+            n0: 7106560 0x109784: main (lab1aotN3246.c:218)
+           n1: 1413120 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 1413120 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 843776 0x496C415: ftw_startup (ftw.c:771)
+              n0: 843776 0x109784: main (lab1aotN3246.c:218)
+             n0: 569344 in 1 place, below massif's threshold (1.00%)
+         n0: 176128 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7A: ???
+                 n1: 2146304 0x1FFF000A89: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 946176 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 946176 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+           n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 946176 0x400D03A: dl_open_worker (dl-open.c:782)
+             n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+              n1: 946176 0x400D42C: _dl_open (dl-open.c:883)
+               n1: 946176 0x48F063B: dlopen_doit (dlopen.c:56)
+                n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                 n1: 946176 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                  n1: 946176 0x48F010E: _dlerror_run (dlerror.c:138)
+                   n1: 946176 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                    n1: 946176 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                     n1: 946176 0x1099F1: plug_info (lab1aotN3246.c:260)
+                      n1: 946176 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                       n1: 946176 0x496BAC2: ftw_dir (ftw.c:551)
+                        n1: 946176 0x496C415: ftw_startup (ftw.c:771)
+                         n0: 946176 0x109249: main (lab1aotN3246.c:122)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7A: ???
+                n1: 1925120 0x1FFF000A89: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 888832 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 888832 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+          n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+           n1: 888832 0x400D03A: dl_open_worker (dl-open.c:782)
+            n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+             n1: 888832 0x400D42C: _dl_open (dl-open.c:883)
+              n1: 888832 0x48F063B: dlopen_doit (dlopen.c:56)
+               n1: 888832 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                n1: 888832 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                 n1: 888832 0x48F010E: _dlerror_run (dlerror.c:138)
+                  n1: 888832 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                   n1: 888832 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                    n1: 888832 0x1099F1: plug_info (lab1aotN3246.c:260)
+                     n1: 888832 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                      n1: 888832 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 888832 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 888832 0x109249: main (lab1aotN3246.c:122)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n1: 1359872 0x496F68B: brk (brk.c:37)
+  n1: 1359872 0x496F754: sbrk (sbrk.c:74)
+   n1: 1359872 0x49019B5: __glibc_morecore (morecore.c:29)
+    n1: 1359872 0x4902929: sysmalloc (malloc.c:2727)
+     n2: 1359872 0x4903A59: _int_malloc (malloc.c:4407)
+      n2: 1175552 0x4905240: calloc (malloc.c:3679)
+       n1: 1167360 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 1167360 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 1167360 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 1167360 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 1167360 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 1167360 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 1134592 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 1134592 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 1134592 0x496C415: ftw_startup (ftw.c:771)
+                n0: 1134592 0x109784: main (lab1aotN3246.c:218)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+             n0: 32768 in 1 place, below massif's threshold (1.00%)
+       n0: 8192 in 1 place, below massif's threshold (1.00%)
+      n0: 184320 in 2 places, all below massif's threshold (1.00%)
+ n0: 274432 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=9511553715
+mem_heap_B=90193920
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 90193920 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 80302080 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 80302080 0x49734A7: mmap (mmap64.c:46)
+   n1: 38801408 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 38801408 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 38801408 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 38801408 0x4905240: calloc (malloc.c:3679)
+       n1: 38801408 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 38801408 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 38801408 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 38801408 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 38801408 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 38801408 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 38801408 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 38801408 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 38801408 0x496C415: ftw_startup (ftw.c:771)
+                n0: 38801408 0x109784: main (lab1aotN3246.c:218)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 25772032 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 25772032 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 25772032 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 25772032 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 25739264 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 25739264 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 25563136 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 25563136 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 13316096 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 13316096 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 10862592 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 10862592 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 10616832 0x496C415: ftw_startup (ftw.c:771)
+                n0: 10616832 0x109784: main (lab1aotN3246.c:218)
+               n0: 245760 in 1 place, below massif's threshold (1.00%)
+             n1: 2453504 0x496C415: ftw_startup (ftw.c:771)
+              n0: 2453504 0x109784: main (lab1aotN3246.c:218)
+           n1: 12247040 0x496C415: ftw_startup (ftw.c:771)
+            n0: 12247040 0x109784: main (lab1aotN3246.c:218)
+         n0: 176128 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n1: 15728640 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 15728640 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 15728640 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 15728640 0x4905240: calloc (malloc.c:3679)
+       n1: 15728640 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 15728640 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 15728640 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7A: ???
+                 n1: 2146304 0x1FFF000A89: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 946176 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 946176 0x400D8DE: dl_open_worker_begin (dl-open.c:592)
+           n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 946176 0x400D03A: dl_open_worker (dl-open.c:782)
+             n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+              n1: 946176 0x400D42C: _dl_open (dl-open.c:883)
+               n1: 946176 0x48F063B: dlopen_doit (dlopen.c:56)
+                n1: 946176 0x49C147D: _dl_catch_exception (dl-error-skeleton.c:208)
+                 n1: 946176 0x49C1532: _dl_catch_error (dl-error-skeleton.c:227)
+                  n1: 946176 0x48F010E: _dlerror_run (dlerror.c:138)
+                   n1: 946176 0x48F06F0: dlopen_implementation (dlopen.c:71)
+                    n1: 946176 0x48F06F0: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                     n1: 946176 0x1099F1: plug_info (lab1aotN3246.c:260)
+                      n1: 946176 0x496B627: process_entry.constprop.0 (ftw.c:472)
+                       n1: 946176 0x496BAC2: ftw_dir (ftw.c:551)
+                        n1: 946176 0x496C415: ftw_startup (ftw.c:771)
+                         n0: 946176 0x109249: main (lab1aotN3246.c:122)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7A: ???
+                n1: 1925120 0x1FFF000A89: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n0: 888832 in 1 place, below massif's threshold (1.00%)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n1: 3203072 0x496F68B: brk (brk.c:37)
+  n1: 3203072 0x496F754: sbrk (sbrk.c:74)
+   n1: 3203072 0x49019B5: __glibc_morecore (morecore.c:29)
+    n1: 3203072 0x4902929: sysmalloc (malloc.c:2727)
+     n2: 3203072 0x4903A59: _int_malloc (malloc.c:4407)
+      n2: 3018752 0x4905240: calloc (malloc.c:3679)
+       n1: 3010560 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 3010560 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 3010560 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 3010560 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 3010560 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 3010560 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 2977792 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 2977792 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 1843200 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 1843200 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 1843200 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 1843200 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 1843200 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 1843200 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+               n1: 1134592 0x496C415: ftw_startup (ftw.c:771)
+                n0: 1134592 0x109784: main (lab1aotN3246.c:218)
+             n0: 32768 in 1 place, below massif's threshold (1.00%)
+       n0: 8192 in 1 place, below massif's threshold (1.00%)
+      n0: 184320 in 2 places, all below massif's threshold (1.00%)
+ n0: 274432 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=17103252283
+mem_heap_B=139448320
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 139448320 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 129556480 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 129556480 0x49734A7: mmap (mmap64.c:46)
+   n1: 67534848 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 67534848 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 67534848 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 67534848 0x4905240: calloc (malloc.c:3679)
+       n1: 67534848 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 67534848 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 67534848 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 67534848 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 67534848 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 67534848 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 67534848 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 67534848 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 67534848 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 67534848 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 67534848 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 67534848 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 67534848 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 67534848 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 67534848 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 67534848 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 67534848 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 67534848 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 46292992 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 46292992 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 46292992 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 46292992 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 46260224 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 46260224 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 46084096 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 46084096 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 30486528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 30486528 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 24948736 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 24948736 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 14147584 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 14147584 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 13889536 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 13889536 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 13856768 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 13856768 0x109784: main (lab1aotN3246.c:218)
+                   n0: 32768 in 1 place, below massif's threshold (1.00%)
+                 n0: 258048 in 1 place, below massif's threshold (1.00%)
+               n1: 10801152 0x496C415: ftw_startup (ftw.c:771)
+                n0: 10801152 0x109784: main (lab1aotN3246.c:218)
+             n1: 5537792 0x496C415: ftw_startup (ftw.c:771)
+              n0: 5537792 0x109784: main (lab1aotN3246.c:218)
+           n1: 15597568 0x496C415: ftw_startup (ftw.c:771)
+            n0: 15597568 0x109784: main (lab1aotN3246.c:218)
+         n0: 176128 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n1: 15728640 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 15728640 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 15728640 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 15728640 0x4905240: calloc (malloc.c:3679)
+       n1: 15728640 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 15728640 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 15728640 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7A: ???
+                 n1: 2146304 0x1FFF000A89: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n0: 946176 in 1 place, below massif's threshold (1.00%)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7A: ???
+                n1: 1925120 0x1FFF000A89: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n0: 888832 in 1 place, below massif's threshold (1.00%)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n1: 3203072 0x496F68B: brk (brk.c:37)
+  n1: 3203072 0x496F754: sbrk (sbrk.c:74)
+   n1: 3203072 0x49019B5: __glibc_morecore (morecore.c:29)
+    n1: 3203072 0x4902929: sysmalloc (malloc.c:2727)
+     n2: 3203072 0x4903A59: _int_malloc (malloc.c:4407)
+      n2: 3018752 0x4905240: calloc (malloc.c:3679)
+       n1: 3010560 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 3010560 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 3010560 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 3010560 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 3010560 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 3010560 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 2977792 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 2977792 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 1843200 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 1843200 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 1843200 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 1843200 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 1843200 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 1843200 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 1134592 in 1 place, below massif's threshold (1.00%)
+             n0: 32768 in 1 place, below massif's threshold (1.00%)
+       n0: 8192 in 1 place, below massif's threshold (1.00%)
+      n0: 184320 in 2 places, all below massif's threshold (1.00%)
+ n0: 274432 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=22148012783
+mem_heap_B=195272704
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 195272704 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 185380864 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 185380864 0x49734A7: mmap (mmap64.c:46)
+   n1: 109649920 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 109649920 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 109649920 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 109649920 0x4905240: calloc (malloc.c:3679)
+       n1: 109649920 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 109649920 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 109649920 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 109649920 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 109649920 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 109649920 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 109649920 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 109649920 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 109649920 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 109649920 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 109649920 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 109649920 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 109649920 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 109649920 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 109649920 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 109649920 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 109649920 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 109649920 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 60002304 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 60002304 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 60002304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 60002304 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 59969536 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 59969536 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 59793408 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 59793408 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 44195840 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 44195840 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 38658048 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 38658048 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 27856896 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 27856896 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 27598848 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 27598848 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 27566080 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 27566080 0x109784: main (lab1aotN3246.c:218)
+                   n0: 32768 in 1 place, below massif's threshold (1.00%)
+                 n0: 258048 in 1 place, below massif's threshold (1.00%)
+               n1: 10801152 0x496C415: ftw_startup (ftw.c:771)
+                n0: 10801152 0x109784: main (lab1aotN3246.c:218)
+             n1: 5537792 0x496C415: ftw_startup (ftw.c:771)
+              n0: 5537792 0x109784: main (lab1aotN3246.c:218)
+           n1: 15597568 0x496C415: ftw_startup (ftw.c:771)
+            n0: 15597568 0x109784: main (lab1aotN3246.c:218)
+         n0: 176128 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n1: 15728640 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 15728640 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 15728640 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 15728640 0x4905240: calloc (malloc.c:3679)
+       n1: 15728640 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 15728640 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 15728640 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7A: ???
+                 n1: 2146304 0x1FFF000A89: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n0: 946176 in 1 place, below massif's threshold (1.00%)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n1: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n0: 2813952 in 2 places, all below massif's threshold (1.00%)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n1: 3203072 0x496F68B: brk (brk.c:37)
+  n1: 3203072 0x496F754: sbrk (sbrk.c:74)
+   n1: 3203072 0x49019B5: __glibc_morecore (morecore.c:29)
+    n1: 3203072 0x4902929: sysmalloc (malloc.c:2727)
+     n2: 3203072 0x4903A59: _int_malloc (malloc.c:4407)
+      n2: 3018752 0x4905240: calloc (malloc.c:3679)
+       n1: 3010560 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 3010560 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 3010560 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 3010560 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 3010560 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 3010560 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 2977792 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 2977792 0x496BAC2: ftw_dir (ftw.c:551)
+               n0: 2977792 in 2 places, all below massif's threshold (1.00%)
+             n0: 32768 in 1 place, below massif's threshold (1.00%)
+       n0: 8192 in 1 place, below massif's threshold (1.00%)
+      n0: 184320 in 2 places, all below massif's threshold (1.00%)
+ n0: 274432 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=29260643652
+mem_heap_B=104570880
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=32977763569
+mem_heap_B=116318208
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=39409529847
+mem_heap_B=132874240
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=44664144910
+mem_heap_B=145440768
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=49724013841
+mem_heap_B=162897920
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=53219701627
+mem_heap_B=168267776
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 168267776 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 158375936 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 158375936 0x49734A7: mmap (mmap64.c:46)
+   n1: 142647296 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 142647296 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 142647296 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 142647296 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 142614528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 142614528 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 142438400 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 142438400 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 126840832 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 126840832 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 121303040 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 121303040 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 110501888 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 110501888 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 110223360 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 110223360 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 110141440 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 110141440 0x109784: main (lab1aotN3246.c:218)
+                   n0: 81920 in 1 place, below massif's threshold (1.00%)
+                 n0: 278528 in 1 place, below massif's threshold (1.00%)
+               n1: 10801152 0x496C415: ftw_startup (ftw.c:771)
+                n0: 10801152 0x109784: main (lab1aotN3246.c:218)
+             n1: 5537792 0x496C415: ftw_startup (ftw.c:771)
+              n0: 5537792 0x109784: main (lab1aotN3246.c:218)
+           n1: 15597568 0x496C415: ftw_startup (ftw.c:771)
+            n0: 15597568 0x109784: main (lab1aotN3246.c:218)
+         n0: 176128 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n1: 15728640 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 15728640 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 15728640 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 15728640 0x4905240: calloc (malloc.c:3679)
+       n1: 15728640 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 15728640 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 15728640 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 15728640 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n1: 15728640 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n3: 6414336 0x4024467: mmap (mmap64.c:46)
+   n1: 3444736 0x40081EA: _dl_map_segment (dl-map-segments.h:29)
+    n1: 3444736 0x40081EA: _dl_map_segments (dl-map-segments.h:102)
+     n1: 3444736 0x40081EA: _dl_map_object_from_fd (dl-load.c:1258)
+      n2: 3444736 0x4009974: _dl_map_object (dl-load.c:2309)
+       n2: 3092480 0x4003324: openaux (dl-deps.c:64)
+        n1: 2146304 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+         n1: 2146304 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+          n1: 2146304 0x4020C9D: dl_main (rtld.c:2015)
+           n1: 2146304 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+            n1: 2146304 0x401EECD: _dl_start_final (rtld.c:507)
+             n1: 2146304 0x401EECD: _dl_start (rtld.c:596)
+              n1: 2146304 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+               n1: 2146304 0x3: ???
+                n1: 2146304 0x1FFF000A7A: ???
+                 n1: 2146304 0x1FFF000A89: ???
+                  n1: 2146304 0x1FFF000A99: ???
+                   n0: 2146304 0x1FFF000A9D: ???
+        n0: 946176 in 1 place, below massif's threshold (1.00%)
+       n0: 352256 in 2 places, all below massif's threshold (1.00%)
+   n1: 2895872 0x4008388: _dl_map_segments (dl-map-segments.h:140)
+    n1: 2895872 0x4008388: _dl_map_object_from_fd (dl-load.c:1258)
+     n2: 2895872 0x4009974: _dl_map_object (dl-load.c:2309)
+      n2: 2813952 0x4003324: openaux (dl-deps.c:64)
+       n1: 1925120 0x401B188: _dl_catch_exception (dl-error-skeleton.c:208)
+        n1: 1925120 0x400378D: _dl_map_object_deps (dl-deps.c:248)
+         n1: 1925120 0x4020C9D: dl_main (rtld.c:2015)
+          n1: 1925120 0x401D2A2: _dl_sysdep_start (dl-sysdep.c:140)
+           n1: 1925120 0x401EECD: _dl_start_final (rtld.c:507)
+            n1: 1925120 0x401EECD: _dl_start (rtld.c:596)
+             n1: 1925120 0x401DCB7: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+              n1: 1925120 0x3: ???
+               n1: 1925120 0x1FFF000A7A: ???
+                n1: 1925120 0x1FFF000A89: ???
+                 n1: 1925120 0x1FFF000A99: ???
+                  n0: 1925120 0x1FFF000A9D: ???
+       n0: 888832 in 1 place, below massif's threshold (1.00%)
+      n0: 81920 in 2 places, all below massif's threshold (1.00%)
+   n0: 73728 in 3 places, all below massif's threshold (1.00%)
+ n1: 3203072 0x496F68B: brk (brk.c:37)
+  n1: 3203072 0x496F754: sbrk (sbrk.c:74)
+   n1: 3203072 0x49019B5: __glibc_morecore (morecore.c:29)
+    n1: 3203072 0x4902929: sysmalloc (malloc.c:2727)
+     n2: 3203072 0x4903A59: _int_malloc (malloc.c:4407)
+      n2: 3018752 0x4905240: calloc (malloc.c:3679)
+       n1: 3010560 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 3010560 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 3010560 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 3010560 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 3010560 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 3010560 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 2977792 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 2977792 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 1843200 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 1843200 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 1843200 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 1843200 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 1843200 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 1843200 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 1134592 in 1 place, below massif's threshold (1.00%)
+             n0: 32768 in 1 place, below massif's threshold (1.00%)
+       n0: 8192 in 1 place, below massif's threshold (1.00%)
+      n0: 184320 in 2 places, all below massif's threshold (1.00%)
+ n0: 274432 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=58622888628
+mem_heap_B=207020032
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=66242148620
+mem_heap_B=253292544
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=72951455062
+mem_heap_B=271593472
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=77656092579
+mem_heap_B=382717952
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 382717952 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 372826112 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 372826112 0x49734A7: mmap (mmap64.c:46)
+   n1: 208199680 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 208199680 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 208199680 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 208199680 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 208166912 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 208166912 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 207990784 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 207990784 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 192393216 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 192393216 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 186855424 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 186855424 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 176054272 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 176054272 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 175738880 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 175738880 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 175173632 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 175173632 0x109784: main (lab1aotN3246.c:218)
+                   n0: 565248 in 1 place, below massif's threshold (1.00%)
+                 n0: 315392 in 1 place, below massif's threshold (1.00%)
+               n1: 10801152 0x496C415: ftw_startup (ftw.c:771)
+                n0: 10801152 0x109784: main (lab1aotN3246.c:218)
+             n1: 5537792 0x496C415: ftw_startup (ftw.c:771)
+              n0: 5537792 0x109784: main (lab1aotN3246.c:218)
+           n1: 15597568 0x496C415: ftw_startup (ftw.c:771)
+            n0: 15597568 0x109784: main (lab1aotN3246.c:218)
+         n0: 176128 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n1: 98381824 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 98381824 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 98381824 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 98381824 0x4905240: calloc (malloc.c:3679)
+       n1: 98381824 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 98381824 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 98381824 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 98381824 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 98381824 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 98381824 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 98381824 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 98381824 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 98381824 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 98381824 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 98381824 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 98381824 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 98381824 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 98381824 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 98381824 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 98381824 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 98381824 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 98381824 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 66244608 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 66244608 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 66244608 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 66244608 0x4905240: calloc (malloc.c:3679)
+       n1: 66244608 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 66244608 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 66244608 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 66244608 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 66244608 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 66244608 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 66244608 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 66244608 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 66244608 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 66244608 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 66244608 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 66244608 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 50515968 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 50515968 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 50515968 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 50515968 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 50515968 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 50515968 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n1: 6414336 0x4024467: mmap (mmap64.c:46)
+   n0: 6414336 in 5 places, all below massif's threshold (1.00%)
+ n0: 3477504 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=81342852685
+mem_heap_B=296173568
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=86369066292
+mem_heap_B=310657024
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=91155815229
+mem_heap_B=347418624
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=97793807677
+mem_heap_B=447447040
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 447447040 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 437555200 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 437555200 0x49734A7: mmap (mmap64.c:46)
+   n1: 262066176 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 262066176 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 262066176 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 262066176 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 262033408 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 262033408 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 261857280 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 261857280 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 246259712 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 246259712 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 240721920 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 240721920 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 229920768 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 229920768 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 229548032 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 229548032 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 228929536 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 228929536 0x109784: main (lab1aotN3246.c:218)
+                   n0: 618496 in 1 place, below massif's threshold (1.00%)
+                 n0: 372736 in 1 place, below massif's threshold (1.00%)
+               n1: 10801152 0x496C415: ftw_startup (ftw.c:771)
+                n0: 10801152 0x109784: main (lab1aotN3246.c:218)
+             n1: 5537792 0x496C415: ftw_startup (ftw.c:771)
+              n0: 5537792 0x109784: main (lab1aotN3246.c:218)
+           n1: 15597568 0x496C415: ftw_startup (ftw.c:771)
+            n0: 15597568 0x109784: main (lab1aotN3246.c:218)
+         n0: 176128 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n1: 93331456 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 93331456 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 93331456 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 93331456 0x4905240: calloc (malloc.c:3679)
+       n1: 93331456 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 93331456 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 93331456 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 93331456 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 93331456 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 93331456 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 93331456 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 93331456 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 93331456 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 93331456 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 93331456 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 93331456 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 77602816 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 77602816 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 77602816 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 77602816 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 77602816 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 77602816 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 82157568 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 82157568 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 82157568 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 82157568 0x4905240: calloc (malloc.c:3679)
+       n1: 82157568 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 82157568 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 82157568 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 82157568 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 82157568 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 82157568 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 82157568 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 82157568 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 82157568 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 82157568 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 82157568 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 82157568 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 82157568 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 82157568 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 82157568 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 82157568 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 82157568 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 82157568 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n1: 6414336 0x4024467: mmap (mmap64.c:46)
+   n0: 6414336 in 5 places, all below massif's threshold (1.00%)
+ n0: 3477504 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=102403891850
+mem_heap_B=381050880
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=105674078495
+mem_heap_B=418635776
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=111562900409
+mem_heap_B=463327232
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=117870158310
+mem_heap_B=480006144
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=122398245511
+mem_heap_B=541786112
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 541786112 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 531894272 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 531894272 0x49734A7: mmap (mmap64.c:46)
+   n1: 327663616 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 327663616 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 327663616 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 327663616 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 327630848 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 327630848 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 327454720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 327454720 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 311857152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 311857152 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 306319360 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 306319360 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 295518208 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 295518208 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 295145472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 295145472 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 294518784 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 294518784 0x109784: main (lab1aotN3246.c:218)
+                   n0: 626688 in 1 place, below massif's threshold (1.00%)
+                 n0: 372736 in 1 place, below massif's threshold (1.00%)
+               n1: 10801152 0x496C415: ftw_startup (ftw.c:771)
+                n0: 10801152 0x109784: main (lab1aotN3246.c:218)
+             n1: 5537792 0x496C415: ftw_startup (ftw.c:771)
+              n0: 5537792 0x109784: main (lab1aotN3246.c:218)
+           n1: 15597568 0x496C415: ftw_startup (ftw.c:771)
+            n0: 15597568 0x109784: main (lab1aotN3246.c:218)
+         n0: 176128 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 49508352 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 49508352 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 49508352 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 49508352 0x4905240: calloc (malloc.c:3679)
+       n1: 49508352 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 49508352 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 49508352 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 49508352 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 49508352 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 49508352 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 49508352 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 49508352 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 49508352 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 49508352 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 49508352 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 49508352 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 49508352 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 49508352 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 49508352 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 49508352 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 49508352 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 49508352 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 6414336 0x4024467: __mmap64 (mmap64.c:58)
+  n1: 6414336 0x4024467: mmap (mmap64.c:46)
+   n0: 6414336 in 5 places, all below massif's threshold (1.00%)
+ n0: 3477504 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=125918553688
+mem_heap_B=537096192
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=131135273965
+mem_heap_B=515547136
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=135186919117
+mem_heap_B=526266368
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=139319114896
+mem_heap_B=538128384
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=146345285816
+mem_heap_B=557379584
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=150125728892
+mem_heap_B=566042624
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=155832395285
+mem_heap_B=581926912
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=160247556004
+mem_heap_B=593145856
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=163996694037
+mem_heap_B=602996736
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=169975567930
+mem_heap_B=619880448
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=175829968536
+mem_heap_B=635211776
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=182267395397
+mem_heap_B=652640256
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 652640256 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 642748416 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 642748416 0x49734A7: mmap (mmap64.c:46)
+   n1: 488026112 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 488026112 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 488026112 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 488026112 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 487993344 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 487993344 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 487817216 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 487817216 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 471695360 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 471695360 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 466128896 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 466128896 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 429318144 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 429318144 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 383496192 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 383496192 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 337223680 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 337223680 0x109784: main (lab1aotN3246.c:218)
+                   n1: 46272512 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 46272512 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 32112640 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 32112640 0x109784: main (lab1aotN3246.c:218)
+                     n1: 14159872 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 14159872 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 7553024 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 7553024 0x109784: main (lab1aotN3246.c:218)
+                       n1: 6606848 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                        n1: 6606848 0x496BAC2: ftw_dir (ftw.c:551)
+                         n1: 6606848 0x496C415: ftw_startup (ftw.c:771)
+                          n0: 6606848 0x109784: main (lab1aotN3246.c:218)
+                 n1: 45821952 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 45821952 0x109784: main (lab1aotN3246.c:218)
+               n1: 36810752 0x496C415: ftw_startup (ftw.c:771)
+                n0: 36810752 0x109784: main (lab1aotN3246.c:218)
+             n0: 5566464 in 1 place, below massif's threshold (1.00%)
+           n1: 16121856 0x496C415: ftw_startup (ftw.c:771)
+            n0: 16121856 0x109784: main (lab1aotN3246.c:218)
+         n0: 176128 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=186540537258
+mem_heap_B=663920640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=190849877775
+mem_heap_B=675504128
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=196388697580
+mem_heap_B=690319360
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=200083206785
+mem_heap_B=700157952
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=206227066466
+mem_heap_B=717144064
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=210152874150
+mem_heap_B=726937600
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=213911249321
+mem_heap_B=739278848
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=218873475911
+mem_heap_B=752771072
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=222757037715
+mem_heap_B=760643584
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=232928375769
+mem_heap_B=976887808
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 976887808 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 966995968 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 966995968 0x49734A7: mmap (mmap64.c:46)
+   n1: 623587328 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 623587328 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 623587328 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 623587328 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 623554560 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 623554560 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 623378432 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 623378432 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 580407296 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 580407296 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 574070784 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 574070784 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 494862336 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 494862336 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 449040384 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 449040384 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 402767872 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 402767872 0x109784: main (lab1aotN3246.c:218)
+                   n1: 46272512 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 46272512 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 32112640 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 32112640 0x109784: main (lab1aotN3246.c:218)
+                     n1: 14159872 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 14159872 0x496BAC2: ftw_dir (ftw.c:551)
+                       n0: 14159872 in 2 places, all below massif's threshold (1.00%)
+                 n1: 45821952 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 45821952 0x109784: main (lab1aotN3246.c:218)
+               n1: 79208448 0x496C415: ftw_startup (ftw.c:771)
+                n0: 79208448 0x109784: main (lab1aotN3246.c:218)
+             n0: 6336512 in 1 place, below massif's threshold (1.00%)
+           n1: 42971136 0x496C415: ftw_startup (ftw.c:771)
+            n0: 42971136 0x109784: main (lab1aotN3246.c:218)
+         n0: 176128 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n1: 188686336 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 188686336 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 188686336 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 188686336 0x4905240: calloc (malloc.c:3679)
+       n1: 188686336 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 188686336 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 188686336 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 188686336 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 188686336 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 188686336 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 188686336 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 188686336 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 188686336 0x496C415: ftw_startup (ftw.c:771)
+                n0: 188686336 0x109784: main (lab1aotN3246.c:218)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=240193476806
+mem_heap_B=872067072
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=246627461011
+mem_heap_B=896950272
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=251764525270
+mem_heap_B=844009472
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=257964180944
+mem_heap_B=899776512
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 899776512 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 889884672 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 889884672 0x49734A7: mmap (mmap64.c:46)
+   n1: 696221696 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 696221696 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 696221696 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 696221696 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 696188928 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 696188928 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 695894016 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 695894016 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 638754816 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 638754816 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 598888448 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 598888448 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 508641280 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 508641280 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 449134592 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 449134592 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 402800640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 402800640 0x109784: main (lab1aotN3246.c:218)
+                   n1: 46333952 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 46333952 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 32161792 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 32161792 0x109784: main (lab1aotN3246.c:218)
+                     n1: 14172160 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 14172160 0x496BAC2: ftw_dir (ftw.c:551)
+                       n0: 14172160 in 2 places, all below massif's threshold (1.00%)
+                 n1: 59506688 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 59506688 0x109784: main (lab1aotN3246.c:218)
+               n1: 90247168 0x496C415: ftw_startup (ftw.c:771)
+                n0: 90247168 0x109784: main (lab1aotN3246.c:218)
+             n1: 39866368 0x496C415: ftw_startup (ftw.c:771)
+              n0: 39866368 0x109784: main (lab1aotN3246.c:218)
+           n1: 57139200 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57139200 0x109784: main (lab1aotN3246.c:218)
+         n0: 294912 in 1 place, below massif's threshold (1.00%)
+       n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 38940672 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 38940672 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 38940672 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 38940672 0x4905240: calloc (malloc.c:3679)
+       n1: 38940672 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 38940672 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 38940672 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 38940672 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 38940672 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 38940672 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 38940672 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 38940672 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 38940672 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 38940672 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 38940672 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 38940672 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 38940672 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 38940672 0x109784: main (lab1aotN3246.c:218)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=261266570782
+mem_heap_B=870133760
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=264881392855
+mem_heap_B=926105600
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=268841643272
+mem_heap_B=976404480
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=273015931487
+mem_heap_B=987348992
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 987348992 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 977457152 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 977457152 0x49734A7: mmap (mmap64.c:46)
+   n1: 737050624 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 737050624 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 737050624 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 737050624 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 737013760 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 737013760 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 735580160 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 735580160 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 677875712 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 677875712 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 637816832 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 637816832 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 545673216 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 545673216 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 482762752 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 482762752 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403202048 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403202048 0x109784: main (lab1aotN3246.c:218)
+                   n1: 79560704 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 79560704 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 61894656 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 61894656 0x109784: main (lab1aotN3246.c:218)
+                     n1: 17666048 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 17666048 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 11059200 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 11059200 0x109784: main (lab1aotN3246.c:218)
+                       n0: 6606848 in 1 place, below massif's threshold (1.00%)
+                 n1: 62910464 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62910464 0x109784: main (lab1aotN3246.c:218)
+               n1: 92143616 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92143616 0x109784: main (lab1aotN3246.c:218)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+           n1: 57704448 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57704448 0x109784: main (lab1aotN3246.c:218)
+         n0: 1433600 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 85684224 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 85684224 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 85684224 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 85684224 0x4905240: calloc (malloc.c:3679)
+       n1: 85684224 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 85684224 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 85684224 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 85684224 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 85684224 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 85684224 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 85684224 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 85684224 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 85684224 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 85684224 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 85684224 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 85684224 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 85684224 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 85684224 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 85684224 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 85684224 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 85684224 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                        n1: 85684224 0x496BAC2: ftw_dir (ftw.c:551)
+                         n1: 85684224 0x496C415: ftw_startup (ftw.c:771)
+                          n0: 85684224 0x109784: main (lab1aotN3246.c:218)
+                       n0: 0 in 1 place, below massif's threshold (1.00%)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=276914918211
+mem_heap_B=992952320
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=280806473306
+mem_heap_B=1003520000
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1003520000 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 993628160 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 993628160 0x49734A7: mmap (mmap64.c:46)
+   n1: 758198272 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 758198272 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 758198272 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 758198272 0x496BAC2: ftw_dir (ftw.c:551)
+       n1: 758161408 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 758161408 0x496BAC2: ftw_dir (ftw.c:551)
+         n1: 756727808 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 756727808 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 699023360 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 699023360 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 658964480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 658964480 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 566820864 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 566820864 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 503910400 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 503910400 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403202048 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403202048 0x109784: main (lab1aotN3246.c:218)
+                   n1: 100708352 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 100708352 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 83042304 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 83042304 0x109784: main (lab1aotN3246.c:218)
+                     n1: 17666048 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 17666048 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 11059200 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 11059200 0x109784: main (lab1aotN3246.c:218)
+                       n0: 6606848 in 1 place, below massif's threshold (1.00%)
+                 n1: 62910464 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62910464 0x109784: main (lab1aotN3246.c:218)
+               n1: 92143616 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92143616 0x109784: main (lab1aotN3246.c:218)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+           n1: 57704448 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57704448 0x109784: main (lab1aotN3246.c:218)
+         n0: 1433600 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 80707584 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 80707584 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 80707584 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 80707584 0x4905240: calloc (malloc.c:3679)
+       n1: 80707584 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 80707584 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 80707584 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 80707584 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 80707584 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 80707584 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 80707584 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 80707584 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 80707584 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 80707584 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 80707584 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 80707584 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 80707584 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 80707584 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 80707584 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 80707584 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 80707584 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                        n1: 80707584 0x496BAC2: ftw_dir (ftw.c:551)
+                         n1: 80707584 0x496C415: ftw_startup (ftw.c:771)
+                          n0: 80707584 0x109784: main (lab1aotN3246.c:218)
+                       n0: 0 in 1 place, below massif's threshold (1.00%)
+                     n0: 0 in 1 place, below massif's threshold (1.00%)
+                   n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=284018432989
+mem_heap_B=931516416
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=287230485232
+mem_heap_B=940273664
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=290441652891
+mem_heap_B=949125120
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=293654816267
+mem_heap_B=958148608
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=296866304105
+mem_heap_B=967041024
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=300078923445
+mem_heap_B=975638528
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=303290062496
+mem_heap_B=984186880
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=306502707967
+mem_heap_B=992890880
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=309715099763
+mem_heap_B=1002061824
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=312926244723
+mem_heap_B=1010909184
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1010909184 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 1001017344 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 1001017344 0x49734A7: mmap (mmap64.c:46)
+   n1: 846295040 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 846295040 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 846295040 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 846295040 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 846258176 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 846188544 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 844750848 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 768233472 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 710524928 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 710033408 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 669974528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 669974528 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 577769472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 577769472 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 514846720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 514846720 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403210240 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403210240 0x109784: main (lab1aotN3246.c:218)
+                   n1: 111636480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 111636480 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 90595328 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 90595328 0x109784: main (lab1aotN3246.c:218)
+                     n1: 21041152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 21041152 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 11554816 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 11554816 0x109784: main (lab1aotN3246.c:218)
+                       n0: 9486336 in 1 place, below massif's threshold (1.00%)
+                 n1: 62922752 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62922752 0x109784: main (lab1aotN3246.c:218)
+               n1: 92205056 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92205056 0x109784: main (lab1aotN3246.c:218)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+            n0: 491520 in 1 place, below massif's threshold (1.00%)
+           n1: 57708544 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57708544 0x109784: main (lab1aotN3246.c:218)
+          n1: 76517376 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 76517376 0x496C415: ftw_startup (ftw.c:771)
+            n0: 76517376 0x109784: main (lab1aotN3246.c:218)
+         n0: 1437696 in 1 place, below massif's threshold (1.00%)
+        n0: 69632 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=66
+#-----------
+time=316138292884
+mem_heap_B=1019691008
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=319350686258
+mem_heap_B=1028476928
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=322564202046
+mem_heap_B=1037205504
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=325776349481
+mem_heap_B=1045749760
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=328988036201
+mem_heap_B=1054318592
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=332203546115
+mem_heap_B=1062912000
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=335416050991
+mem_heap_B=1071472640
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=338627273860
+mem_heap_B=1080045568
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=341839607655
+mem_heap_B=1088782336
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=345050688070
+mem_heap_B=1097363456
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1097363456 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 1087471616 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 1087471616 0x49734A7: mmap (mmap64.c:46)
+   n1: 932749312 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 932749312 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 932749312 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 932749312 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 932712448 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 932642816 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 931205120 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 768233472 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 710524928 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 710033408 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 669974528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 669974528 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 577769472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 577769472 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 514846720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 514846720 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403210240 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403210240 0x109784: main (lab1aotN3246.c:218)
+                   n1: 111636480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 111636480 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 90595328 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 90595328 0x109784: main (lab1aotN3246.c:218)
+                     n1: 21041152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n2: 21041152 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 11554816 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 11554816 0x109784: main (lab1aotN3246.c:218)
+                       n0: 9486336 in 1 place, below massif's threshold (1.00%)
+                 n1: 62922752 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62922752 0x109784: main (lab1aotN3246.c:218)
+               n1: 92205056 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92205056 0x109784: main (lab1aotN3246.c:218)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+            n0: 491520 in 1 place, below massif's threshold (1.00%)
+           n1: 57708544 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57708544 0x109784: main (lab1aotN3246.c:218)
+          n1: 162971648 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 162971648 0x496C415: ftw_startup (ftw.c:771)
+            n0: 162971648 0x109784: main (lab1aotN3246.c:218)
+         n0: 1437696 in 1 place, below massif's threshold (1.00%)
+        n0: 69632 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=76
+#-----------
+time=348262248727
+mem_heap_B=1105850368
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=351478628983
+mem_heap_B=1114505216
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=355179942809
+mem_heap_B=1124401152
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=358399839538
+mem_heap_B=1133207552
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=362898984427
+mem_heap_B=1183522816
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1183522816 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 1173630976 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 1173630976 0x49734A7: mmap (mmap64.c:46)
+   n1: 980488192 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 980488192 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 980488192 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 980488192 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 980451328 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 980381696 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 978944000 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 768233472 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 710524928 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 710033408 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 669974528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 669974528 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 577769472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 577769472 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 514846720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 514846720 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403210240 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403210240 0x109784: main (lab1aotN3246.c:218)
+                   n1: 111636480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 111636480 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 90595328 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 90595328 0x109784: main (lab1aotN3246.c:218)
+                     n1: 21041152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 21041152 0x496BAC2: ftw_dir (ftw.c:551)
+                       n0: 21041152 in 2 places, all below massif's threshold (1.00%)
+                 n1: 62922752 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62922752 0x109784: main (lab1aotN3246.c:218)
+               n1: 92205056 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92205056 0x109784: main (lab1aotN3246.c:218)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+            n0: 491520 in 1 place, below massif's threshold (1.00%)
+           n1: 57708544 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57708544 0x109784: main (lab1aotN3246.c:218)
+          n1: 210710528 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 210710528 0x496C415: ftw_startup (ftw.c:771)
+            n0: 210710528 0x109784: main (lab1aotN3246.c:218)
+         n0: 1437696 in 1 place, below massif's threshold (1.00%)
+        n0: 69632 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 38420480 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 38420480 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 38420480 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 38420480 0x4905240: calloc (malloc.c:3679)
+       n1: 38420480 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 38420480 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 38420480 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 38420480 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 38420480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 38420480 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 38420480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 38420480 0x496BAFC: ftw_dir (ftw.c:582)
+               n1: 38420480 0x496C415: ftw_startup (ftw.c:771)
+                n0: 38420480 0x109784: main (lab1aotN3246.c:218)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=81
+#-----------
+time=366479757139
+mem_heap_B=1155223552
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=369818580851
+mem_heap_B=1164451840
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=373631955931
+mem_heap_B=1173655552
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=377892619934
+mem_heap_B=1237782528
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1237782528 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 1227890688 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 1227890688 0x49734A7: mmap (mmap64.c:46)
+   n1: 1020604416 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 1020604416 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 1020604416 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 1020604416 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 1020567552 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 1020497920 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 1019060224 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 774828032 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 717119488 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 710033408 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 669974528 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 669974528 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 577769472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 577769472 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 514846720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 514846720 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403210240 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403210240 0x109784: main (lab1aotN3246.c:218)
+                   n1: 111636480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 111636480 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 90595328 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 90595328 0x109784: main (lab1aotN3246.c:218)
+                     n1: 21041152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 21041152 0x496BAC2: ftw_dir (ftw.c:551)
+                       n0: 21041152 in 2 places, all below massif's threshold (1.00%)
+                 n1: 62922752 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62922752 0x109784: main (lab1aotN3246.c:218)
+               n1: 92205056 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92205056 0x109784: main (lab1aotN3246.c:218)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+            n0: 7086080 in 1 place, below massif's threshold (1.00%)
+           n1: 57708544 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57708544 0x109784: main (lab1aotN3246.c:218)
+          n1: 244232192 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 244232192 0x496C415: ftw_startup (ftw.c:771)
+            n0: 244232192 0x109784: main (lab1aotN3246.c:218)
+         n0: 1437696 in 1 place, below massif's threshold (1.00%)
+        n0: 69632 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 52563968 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 52563968 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 52563968 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 52563968 0x4905240: calloc (malloc.c:3679)
+       n1: 52563968 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 52563968 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 52563968 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 52563968 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 52563968 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 52563968 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 52563968 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 52563968 0x496BAC2: ftw_dir (ftw.c:551)
+               n2: 52563968 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 52563968 0x496BAFC: ftw_dir (ftw.c:582)
+                 n1: 52563968 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 52563968 0x109784: main (lab1aotN3246.c:218)
+                n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=85
+#-----------
+time=381112509203
+mem_heap_B=1194110976
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=383857071992
+mem_heap_B=1255272448
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1255272448 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 1245380608 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 1245380608 0x49734A7: mmap (mmap64.c:46)
+   n1: 1036898304 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 1036898304 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 1036898304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 1036898304 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 1036861440 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 1036791808 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 1035354112 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 791121920 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 733413376 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 710053888 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 669995008 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 669974528 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 577769472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 577769472 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 514846720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 514846720 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403210240 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403210240 0x109784: main (lab1aotN3246.c:218)
+                   n1: 111636480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 111636480 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 90595328 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 90595328 0x109784: main (lab1aotN3246.c:218)
+                     n1: 21041152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 21041152 0x496BAC2: ftw_dir (ftw.c:551)
+                       n0: 21041152 in 2 places, all below massif's threshold (1.00%)
+                 n1: 62922752 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62922752 0x109784: main (lab1aotN3246.c:218)
+               n1: 92205056 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92205056 0x109784: main (lab1aotN3246.c:218)
+              n0: 20480 in 1 place, below massif's threshold (1.00%)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+            n1: 23359488 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 23359488 0x496C415: ftw_startup (ftw.c:771)
+              n0: 23359488 0x109784: main (lab1aotN3246.c:218)
+           n1: 57708544 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57708544 0x109784: main (lab1aotN3246.c:218)
+          n1: 244232192 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 244232192 0x496C415: ftw_startup (ftw.c:771)
+            n0: 244232192 0x109784: main (lab1aotN3246.c:218)
+         n0: 1437696 in 1 place, below massif's threshold (1.00%)
+        n0: 69632 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 53760000 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 53760000 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 53760000 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 53760000 0x4905240: calloc (malloc.c:3679)
+       n1: 53760000 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 53760000 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 53760000 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 53760000 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 53760000 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 53760000 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 53760000 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 53760000 0x496BAC2: ftw_dir (ftw.c:551)
+               n2: 53760000 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 53760000 0x496BAFC: ftw_dir (ftw.c:582)
+                 n1: 53760000 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 53760000 0x109784: main (lab1aotN3246.c:218)
+                n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=87
+#-----------
+time=387658316838
+mem_heap_B=1265979392
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=391037575283
+mem_heap_B=1275277312
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1275277312 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 1265385472 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 1265385472 0x49734A7: mmap (mmap64.c:46)
+   n1: 1056505856 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 1056505856 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 1056505856 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 1056505856 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 1056468992 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 1056399360 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 1054961664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 810729472 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 753020928 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 710053888 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 669995008 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 669974528 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 577769472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 577769472 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 514846720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 514846720 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403210240 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403210240 0x109784: main (lab1aotN3246.c:218)
+                   n1: 111636480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 111636480 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 90595328 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 90595328 0x109784: main (lab1aotN3246.c:218)
+                     n1: 21041152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 21041152 0x496BAC2: ftw_dir (ftw.c:551)
+                       n0: 21041152 in 2 places, all below massif's threshold (1.00%)
+                 n1: 62922752 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62922752 0x109784: main (lab1aotN3246.c:218)
+               n1: 92205056 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92205056 0x109784: main (lab1aotN3246.c:218)
+              n0: 20480 in 1 place, below massif's threshold (1.00%)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+            n1: 42967040 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 42967040 0x496C415: ftw_startup (ftw.c:771)
+              n0: 42967040 0x109784: main (lab1aotN3246.c:218)
+           n1: 57708544 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57708544 0x109784: main (lab1aotN3246.c:218)
+          n1: 244232192 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 244232192 0x496C415: ftw_startup (ftw.c:771)
+            n0: 244232192 0x109784: main (lab1aotN3246.c:218)
+         n0: 1437696 in 1 place, below massif's threshold (1.00%)
+        n0: 69632 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 54157312 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 54157312 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 54157312 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 54157312 0x4905240: calloc (malloc.c:3679)
+       n1: 54157312 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 54157312 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 54157312 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 54157312 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 54157312 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 54157312 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 54157312 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 54157312 0x496BAC2: ftw_dir (ftw.c:551)
+               n2: 54157312 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 54157312 0x496BAFC: ftw_dir (ftw.c:582)
+                 n1: 54157312 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 54157312 0x109784: main (lab1aotN3246.c:218)
+                n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=89
+#-----------
+time=394558051196
+mem_heap_B=1284796416
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=398161062992
+mem_heap_B=1294639104
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1294639104 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 1284747264 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 1284747264 0x49734A7: mmap (mmap64.c:46)
+   n1: 1075834880 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 1075834880 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 1075834880 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 1075834880 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 1075798016 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 1075728384 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 1074290688 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 830058496 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 772349952 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 710053888 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 669995008 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 669974528 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 577769472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 577769472 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 514846720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 514846720 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403210240 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403210240 0x109784: main (lab1aotN3246.c:218)
+                   n1: 111636480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 111636480 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 90595328 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 90595328 0x109784: main (lab1aotN3246.c:218)
+                     n1: 21041152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 21041152 0x496BAC2: ftw_dir (ftw.c:551)
+                       n0: 21041152 in 2 places, all below massif's threshold (1.00%)
+                 n1: 62922752 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62922752 0x109784: main (lab1aotN3246.c:218)
+               n1: 92205056 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92205056 0x109784: main (lab1aotN3246.c:218)
+              n0: 20480 in 1 place, below massif's threshold (1.00%)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+            n1: 62296064 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 62296064 0x496C415: ftw_startup (ftw.c:771)
+              n0: 62296064 0x109784: main (lab1aotN3246.c:218)
+           n1: 57708544 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57708544 0x109784: main (lab1aotN3246.c:218)
+          n1: 244232192 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 244232192 0x496C415: ftw_startup (ftw.c:771)
+            n0: 244232192 0x109784: main (lab1aotN3246.c:218)
+         n0: 1437696 in 1 place, below massif's threshold (1.00%)
+        n0: 69632 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 54190080 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 54190080 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 54190080 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 54190080 0x4905240: calloc (malloc.c:3679)
+       n1: 54190080 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 54190080 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 54190080 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 54190080 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 54190080 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 54190080 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 54190080 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 54190080 0x496BAC2: ftw_dir (ftw.c:551)
+               n2: 54190080 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 54190080 0x496BAFC: ftw_dir (ftw.c:582)
+                 n1: 54190080 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 54190080 0x109784: main (lab1aotN3246.c:218)
+                n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=91
+#-----------
+time=402649516492
+mem_heap_B=1306853376
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=406780364732
+mem_heap_B=1317928960
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1317928960 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 1308037120 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 1308037120 0x49734A7: mmap (mmap64.c:46)
+   n1: 1099243520 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 1099243520 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 1099243520 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 1099243520 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 1099206656 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 1099137024 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 1097699328 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 853467136 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 795758592 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 710053888 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 669995008 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 669974528 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 577769472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 577769472 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 514846720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 514846720 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403210240 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403210240 0x109784: main (lab1aotN3246.c:218)
+                   n1: 111636480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 111636480 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 90595328 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 90595328 0x109784: main (lab1aotN3246.c:218)
+                     n1: 21041152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 21041152 0x496BAC2: ftw_dir (ftw.c:551)
+                       n0: 21041152 in 2 places, all below massif's threshold (1.00%)
+                 n1: 62922752 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62922752 0x109784: main (lab1aotN3246.c:218)
+               n1: 92205056 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92205056 0x109784: main (lab1aotN3246.c:218)
+              n0: 20480 in 1 place, below massif's threshold (1.00%)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+            n1: 85704704 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 85704704 0x496C415: ftw_startup (ftw.c:771)
+              n0: 85704704 0x109784: main (lab1aotN3246.c:218)
+           n1: 57708544 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57708544 0x109784: main (lab1aotN3246.c:218)
+          n1: 244232192 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 244232192 0x496C415: ftw_startup (ftw.c:771)
+            n0: 244232192 0x109784: main (lab1aotN3246.c:218)
+         n0: 1437696 in 1 place, below massif's threshold (1.00%)
+        n0: 69632 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 54071296 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 54071296 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 54071296 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 54071296 0x4905240: calloc (malloc.c:3679)
+       n1: 54071296 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 54071296 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 54071296 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 54071296 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 54071296 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 54071296 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 54071296 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 54071296 0x496BAC2: ftw_dir (ftw.c:551)
+               n2: 54071296 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 54071296 0x496BAFC: ftw_dir (ftw.c:582)
+                 n1: 54071296 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 54071296 0x109784: main (lab1aotN3246.c:218)
+                n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=93
+#-----------
+time=410302988831
+mem_heap_B=1273450496
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=413607195933
+mem_heap_B=1282371584
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=419268848811
+mem_heap_B=1378881536
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1378881536 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 1368989696 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 1368989696 0x49734A7: mmap (mmap64.c:46)
+   n1: 1133187072 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 1133187072 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 1133187072 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 1133187072 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 1133150208 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 1132830720 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 1131393024 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 879640576 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 821932032 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 723673088 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 683614208 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 669974528 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 577769472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 577769472 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 514846720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 514846720 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403210240 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403210240 0x109784: main (lab1aotN3246.c:218)
+                   n1: 111636480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 111636480 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 90595328 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 90595328 0x109784: main (lab1aotN3246.c:218)
+                     n1: 21041152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 21041152 0x496BAC2: ftw_dir (ftw.c:551)
+                       n0: 21041152 in 2 places, all below massif's threshold (1.00%)
+                 n1: 62922752 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62922752 0x109784: main (lab1aotN3246.c:218)
+               n1: 92205056 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92205056 0x109784: main (lab1aotN3246.c:218)
+              n0: 13639680 in 1 place, below massif's threshold (1.00%)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+            n1: 98258944 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 98258944 0x496C415: ftw_startup (ftw.c:771)
+              n0: 98258944 0x109784: main (lab1aotN3246.c:218)
+           n1: 57708544 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57708544 0x109784: main (lab1aotN3246.c:218)
+          n1: 251752448 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 251752448 0x496C415: ftw_startup (ftw.c:771)
+            n0: 251752448 0x109784: main (lab1aotN3246.c:218)
+         n0: 1437696 in 1 place, below massif's threshold (1.00%)
+        n0: 319488 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 81080320 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 81080320 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 81080320 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 81080320 0x4905240: calloc (malloc.c:3679)
+       n1: 81080320 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 81080320 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 81080320 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 81080320 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 81080320 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 81080320 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 81080320 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 81080320 0x496BAC2: ftw_dir (ftw.c:551)
+               n2: 81080320 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 81080320 0x496BAC2: ftw_dir (ftw.c:551)
+                 n2: 81080320 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n1: 81080320 0x496BAFC: ftw_dir (ftw.c:582)
+                   n1: 81080320 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 81080320 0x109784: main (lab1aotN3246.c:218)
+                  n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+                n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=96
+#-----------
+time=426556956741
+mem_heap_B=1452183552
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=peak
+n2: 1452183552 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n1: 1442291712 0x49734A7: __mmap64 (mmap64.c:58)
+  n3: 1442291712 0x49734A7: mmap (mmap64.c:46)
+   n1: 1152925696 0x484E9A4: plugin_process_file (bugFloatBin.c:183)
+    n1: 1152925696 0x109DB5: check_func (lab1aotN3246.c:373)
+     n1: 1152925696 0x496B627: process_entry.constprop.0 (ftw.c:472)
+      n2: 1152925696 0x496BAC2: ftw_dir (ftw.c:551)
+       n2: 1152888832 0x496B835: process_entry.constprop.0 (ftw.c:469)
+        n2: 1152569344 0x496BAC2: ftw_dir (ftw.c:551)
+         n2: 1151131648 0x496B835: process_entry.constprop.0 (ftw.c:469)
+          n2: 899379200 0x496BAC2: ftw_dir (ftw.c:551)
+           n2: 841670656 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n2: 743411712 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 703352832 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 669974528 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 577769472 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 577769472 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 514846720 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 514846720 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 403210240 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 403210240 0x109784: main (lab1aotN3246.c:218)
+                   n1: 111636480 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n2: 111636480 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 90595328 0x496C415: ftw_startup (ftw.c:771)
+                      n0: 90595328 0x109784: main (lab1aotN3246.c:218)
+                     n1: 21041152 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 21041152 0x496BAC2: ftw_dir (ftw.c:551)
+                       n0: 21041152 in 2 places, all below massif's threshold (1.00%)
+                 n1: 62922752 0x496C415: ftw_startup (ftw.c:771)
+                  n0: 62922752 0x109784: main (lab1aotN3246.c:218)
+               n1: 92205056 0x496C415: ftw_startup (ftw.c:771)
+                n0: 92205056 0x109784: main (lab1aotN3246.c:218)
+              n1: 33378304 0x496BAFC: ftw_dir (ftw.c:582)
+               n1: 33378304 0x496C415: ftw_startup (ftw.c:771)
+                n0: 33378304 0x109784: main (lab1aotN3246.c:218)
+             n1: 40058880 0x496C415: ftw_startup (ftw.c:771)
+              n0: 40058880 0x109784: main (lab1aotN3246.c:218)
+            n1: 98258944 0x496BAFC: ftw_dir (ftw.c:582)
+             n1: 98258944 0x496C415: ftw_startup (ftw.c:771)
+              n0: 98258944 0x109784: main (lab1aotN3246.c:218)
+           n1: 57708544 0x496C415: ftw_startup (ftw.c:771)
+            n0: 57708544 0x109784: main (lab1aotN3246.c:218)
+          n1: 251752448 0x496BAFC: ftw_dir (ftw.c:582)
+           n1: 251752448 0x496C415: ftw_startup (ftw.c:771)
+            n0: 251752448 0x109784: main (lab1aotN3246.c:218)
+         n0: 1437696 in 1 place, below massif's threshold (1.00%)
+        n0: 319488 in 1 place, below massif's threshold (1.00%)
+       n0: 36864 in 1 place, below massif's threshold (1.00%)
+   n1: 154722304 0x49017D0: sysmalloc_mmap_fallback.constprop.0 (malloc.c:2526)
+    n1: 154722304 0x49027BD: sysmalloc (malloc.c:2752)
+     n1: 154722304 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 154722304 0x4905240: calloc (malloc.c:3679)
+       n1: 154722304 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 154722304 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 154722304 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+             n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+               n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n1: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                 n1: 154722304 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n2: 154722304 0x496BAC2: ftw_dir (ftw.c:551)
+                   n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                    n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                     n1: 138993664 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                      n1: 138993664 0x496BAC2: ftw_dir (ftw.c:551)
+                       n1: 138993664 0x496C415: ftw_startup (ftw.c:771)
+                        n0: 138993664 0x109784: main (lab1aotN3246.c:218)
+                   n1: 15728640 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 15728640 0x109784: main (lab1aotN3246.c:218)
+   n1: 134643712 0x4901897: sysmalloc_mmap.constprop.0 (malloc.c:2441)
+    n1: 134643712 0x4902673: sysmalloc (malloc.c:2594)
+     n1: 134643712 0x4903A59: _int_malloc (malloc.c:4407)
+      n1: 134643712 0x4905240: calloc (malloc.c:3679)
+       n1: 134643712 0x484EA0B: plugin_process_file (bugFloatBin.c:189)
+        n1: 134643712 0x109DB5: check_func (lab1aotN3246.c:373)
+         n1: 134643712 0x496B627: process_entry.constprop.0 (ftw.c:472)
+          n1: 134643712 0x496BAC2: ftw_dir (ftw.c:551)
+           n1: 134643712 0x496B835: process_entry.constprop.0 (ftw.c:469)
+            n1: 134643712 0x496BAC2: ftw_dir (ftw.c:551)
+             n2: 134643712 0x496B835: process_entry.constprop.0 (ftw.c:469)
+              n2: 134643712 0x496BAC2: ftw_dir (ftw.c:551)
+               n2: 134643712 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                n2: 134643712 0x496BAC2: ftw_dir (ftw.c:551)
+                 n2: 134643712 0x496B835: process_entry.constprop.0 (ftw.c:469)
+                  n1: 134643712 0x496BAFC: ftw_dir (ftw.c:582)
+                   n1: 134643712 0x496C415: ftw_startup (ftw.c:771)
+                    n0: 134643712 0x109784: main (lab1aotN3246.c:218)
+                  n0: 0 in 1 place, below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+                n0: 0 in 1 place, below massif's threshold (1.00%)
+               n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 9891840 in 4 places, all below massif's threshold (1.00%)

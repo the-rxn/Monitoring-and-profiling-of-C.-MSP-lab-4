@@ -139,3 +139,10 @@ MBean, определяющий площадь получившейся фигу
       Program Executed: ./lab1aotN3246 --float-bin 1.5 /home/mertz/.config/
       Time: 22:08:47.487286
       Exit: 0
+
+### Performance 
+1. Yet againg, after examining the flamegraph we figured out that the performance is heavily dependant on plugin_process_file() and KMPalg().
+Diving deeper into the source code we found out that instead of taking the input as it is in binary, the author of the library translated everything into a char array with '1's and '0's.
+
+So, replacing it with a little more sane code boosted the performance 97 times. ~(1.37 min -> 1s)
+

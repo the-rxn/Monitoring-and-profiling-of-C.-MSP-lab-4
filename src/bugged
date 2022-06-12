@@ -1,0 +1,23 @@
+==269368== Massif, a heap profiler
+==269368== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==269368== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
+==269368== Command: ./lab1aotN3246 --bug-float-bin 1.5 /home/mertz/.config/
+==269368== Parent PID: 246063
+==269368== 
+==269368== brk segment overflow in thread #1: can't grow to 0x4eec000
+==269368== (see section Limitations in user manual)
+==269368== NOTE: further instances of this message will not be shown
+==269368== 
+==269368== Process terminating with default action of signal 2 (SIGINT)
+==269368==    at 0x49C88A0: __strlen_avx2 (strlen-avx2.S:290)
+==269368==    by 0x484EA8E: plugin_process_file (bugFloatBin.c:202)
+==269368==    by 0x109DB5: check_func (lab1aotN3246.c:373)
+==269368==    by 0x496B627: process_entry.constprop.0 (ftw.c:472)
+==269368==    by 0x496BAC2: ftw_dir (ftw.c:551)
+==269368==    by 0x496B835: process_entry.constprop.0 (ftw.c:469)
+==269368==    by 0x496BAC2: ftw_dir (ftw.c:551)
+==269368==    by 0x496B835: process_entry.constprop.0 (ftw.c:469)
+==269368==    by 0x496BAFC: ftw_dir (ftw.c:582)
+==269368==    by 0x496C415: ftw_startup (ftw.c:771)
+==269368==    by 0x109784: main (lab1aotN3246.c:218)
+==269368== 
