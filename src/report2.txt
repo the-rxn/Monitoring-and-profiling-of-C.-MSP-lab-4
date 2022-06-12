@@ -1,0 +1,2305 @@
+reading file "heaptrack.lab1aotN3246.178733.zst" - please wait, this might take some time...
+Debuggee command was: ./lab1aotN3246 --float-bin 1.5 ./
+finished reading file, now analyzing data:
+
+MOST CALLS TO ALLOCATION FUNCTIONS
+179712 calls to allocation functions with 32.77K peak consumption from
+KMPAlg
+  at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:101
+  in ./gavnolib.so
+32256 calls with 0B peak consumption from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+32256 calls with 0B peak consumption from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:209
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+16896 calls with 0B peak consumption from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+16896 calls with 0B peak consumption from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:209
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+16896 calls with 0B peak consumption from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 64512 from 9 other places
+
+702 calls to allocation functions with 2.05K peak consumption from
+KMPAlg
+  at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:99
+  in ./gavnolib.so
+126 calls with 0B peak consumption from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+126 calls with 0B peak consumption from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:209
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 calls with 0B peak consumption from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 calls with 0B peak consumption from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:209
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 calls with 0B peak consumption from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 252 from 9 other places
+
+396 calls to allocation functions with 9.30K peak consumption from
+0x7ff0e0eb097e
+  in /lib64/ld-linux-x86-64.so.2
+126 calls with 0B peak consumption from:
+    0x7ff0e0e958ed
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 calls with 0B peak consumption from:
+    0x7ff0e0e958ed
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 calls with 0B peak consumption from:
+    0x7ff0e0e958ed
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+40 calls with 0B peak consumption from:
+    0x7ff0e0e958ed
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+36 calls with 43B peak consumption from:
+    0x7ff0e0e958ed
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 62 from 14 other places
+
+351 calls to allocation functions with 40.35M peak consumption from
+plugin_process_file
+  at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:189
+  in ./gavnolib.so
+126 calls with 0B peak consumption from:
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 calls with 0B peak consumption from:
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 calls with 0B peak consumption from:
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+40 calls with 0B peak consumption from:
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+34 calls with 40.35M peak consumption from:
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 19 from 2 other places
+
+350 calls to allocation functions with 51B peak consumption from
+_dl_exception_create
+  in /lib64/ld-linux-x86-64.so.2
+122 calls with 0B peak consumption from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 calls with 0B peak consumption from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+64 calls with 0B peak consumption from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+40 calls with 0B peak consumption from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+28 calls with 51B peak consumption from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 30 from 6 other places
+
+145 calls to allocation functions with 37.02K peak consumption from
+0x7ff0e0d4e00f
+  in /usr/lib/libc.so.6
+18 calls with 0B peak consumption from:
+    fdopendir
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dea6
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+18 calls with 0B peak consumption from:
+    fdopendir
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dea6
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+18 calls with 0B peak consumption from:
+    fdopendir
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dea6
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+18 calls with 0B peak consumption from:
+    fdopendir
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dea6
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+14 calls with 0B peak consumption from:
+    fdopendir
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dea6
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 59 from 12 other places
+
+3 calls to allocation functions with 24B peak consumption from
+plug_info
+  at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:299
+  in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+3 calls with 24B peak consumption from:
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+
+3 calls to allocation functions with 160B peak consumption from
+plug_info
+  at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:316
+  in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+3 calls with 160B peak consumption from:
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+
+3 calls to allocation functions with 24B peak consumption from
+plug_info
+  at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:342
+  in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+3 calls with 24B peak consumption from:
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+
+1 calls to allocation functions with 3B peak consumption from
+main
+  at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:113
+  in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+1 calls with 3B peak consumption from:
+
+
+PEAK MEMORY CONSUMERS
+40.35M peak memory consumed over 351 calls from
+plugin_process_file
+  at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:189
+  in ./gavnolib.so
+40.35M consumed over 34 calls from:
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 0B from 2 other places
+
+72.70K peak memory consumed over 1 calls from
+pool
+  at /usr/src/debug/gcc/libstdc++-v3/libsupc++/eh_alloc.cc:123
+  in /usr/lib/libstdc++.so.6
+__static_initialization_and_destruction_0
+  at /usr/src/debug/gcc/libstdc++-v3/libsupc++/eh_alloc.cc:262
+_GLOBAL__sub_I_eh_alloc.cc
+  at /usr/src/debug/gcc/libstdc++-v3/libsupc++/eh_alloc.cc:338
+72.70K consumed over 1 calls from:
+    0x7ff0e0e91f3d
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e9202b
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0ea9ce9
+      in /lib64/ld-linux-x86-64.so.2
+
+37.02K peak memory consumed over 145 calls from
+0x7ff0e0d4e00f
+  in /usr/lib/libc.so.6
+32.82K consumed over 1 calls from:
+    0x7ff0e0d22971
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d9fa
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+4.18K consumed over 1 calls from:
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+24B consumed over 3 calls from:
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 0B from 12 other places
+
+32.77K peak memory consumed over 179712 calls from
+KMPAlg
+  at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:101
+  in ./gavnolib.so
+32.77K consumed over 8704 calls from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 0B from 9 other places
+
+9.30K peak memory consumed over 396 calls from
+0x7ff0e0eb097e
+  in /lib64/ld-linux-x86-64.so.2
+4.61K consumed over 2 calls from:
+    0x7ff0e0e99ab7
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+3.62K consumed over 8 calls from:
+    0x7ff0e0e93f4e
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95974
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+427B consumed over 8 calls from:
+    0x7ff0e0e93f4e
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95974
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+384B consumed over 3 calls from:
+    0x7ff0e0e99922
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+216B consumed over 3 calls from:
+    0x7ff0e0e998de
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 43B from 14 other places
+
+2.05K peak memory consumed over 702 calls from
+KMPAlg
+  at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:99
+  in ./gavnolib.so
+2.05K consumed over 34 calls from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 0B from 9 other places
+
+160B peak memory consumed over 3 calls from
+plug_info
+  at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:316
+  in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+160B consumed over 3 calls from:
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+
+51B peak memory consumed over 350 calls from
+_dl_exception_create
+  in /lib64/ld-linux-x86-64.so.2
+51B consumed over 28 calls from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 0B from 6 other places
+
+32B peak memory consumed over 1 calls from
+main
+  at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:160
+  in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+32B consumed over 1 calls from:
+
+24B peak memory consumed over 3 calls from
+plug_info
+  at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:299
+  in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+24B consumed over 3 calls from:
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+
+
+MEMORY LEAKS
+4.61K leaked over 396 calls from
+0x7ff0e0eb097e
+  in /lib64/ld-linux-x86-64.so.2
+4.61K leaked over 2 calls from:
+    0x7ff0e0e99ab7
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 0B from 14 other places
+
+
+MOST TEMPORARY ALLOCATIONS
+702 temporary allocations of 179712 allocations in total (0.39%) from
+KMPAlg
+  at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:101
+  in ./gavnolib.so
+126 temporary allocations of 32256 allocations in total (0.39%) from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+126 temporary allocations of 32256 allocations in total (0.39%) from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:209
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 temporary allocations of 16896 allocations in total (0.39%) from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 temporary allocations of 16896 allocations in total (0.39%) from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:209
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 temporary allocations of 16896 allocations in total (0.39%) from:
+    plugin_process_file
+      at /home/mertz/dev/uni/mispi/lab4/src/gavnolib.c:208
+      in ./gavnolib.so
+    check_func
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:373
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 252B from 9 other places
+
+351 temporary allocations of 396 allocations in total (88.64%) from
+0x7ff0e0eb097e
+  in /lib64/ld-linux-x86-64.so.2
+122 temporary allocations of 126 allocations in total (96.83%) from:
+    0x7ff0e0e958ed
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+66 temporary allocations of 66 allocations in total (100.00%) from:
+    0x7ff0e0e958ed
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+64 temporary allocations of 66 allocations in total (96.97%) from:
+    0x7ff0e0e958ed
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+40 temporary allocations of 40 allocations in total (100.00%) from:
+    0x7ff0e0e958ed
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+28 temporary allocations of 36 allocations in total (77.78%) from:
+    0x7ff0e0e958ed
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 31B from 14 other places
+
+289 temporary allocations of 350 allocations in total (82.57%) from
+_dl_exception_create
+  in /lib64/ld-linux-x86-64.so.2
+112 temporary allocations of 122 allocations in total (91.80%) from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+54 temporary allocations of 64 allocations in total (84.38%) from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+51 temporary allocations of 66 allocations in total (77.27%) from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+36 temporary allocations of 40 allocations in total (90.00%) from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+23 temporary allocations of 28 allocations in total (82.14%) from:
+    _dl_signal_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0e926a9
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e95923
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e99878
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9903a
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    0x7ff0e0e9942c
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0cd263b
+      in /usr/lib/libc.so.6
+    _dl_catch_exception
+      in /usr/lib/libc.so.6
+    _dl_catch_error
+      in /usr/lib/libc.so.6
+    0x7ff0e0cd210e
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/libc.so.6
+    dlopen
+      in /usr/lib/heaptrack/libheaptrack_preload.so
+    plug_info
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:260
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+    0x7ff0e0d4d627
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 13B from 6 other places
+
+22 temporary allocations of 145 allocations in total (15.17%) from
+0x7ff0e0d4e00f
+  in /usr/lib/libc.so.6
+5 temporary allocations of 18 allocations in total (27.78%) from:
+    fdopendir
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dea6
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+5 temporary allocations of 18 allocations in total (27.78%) from:
+    fdopendir
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dea6
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+2 temporary allocations of 4 allocations in total (50.00%) from:
+    fdopendir
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dea6
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+2 temporary allocations of 18 allocations in total (11.11%) from:
+    fdopendir
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dea6
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:122
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+2 temporary allocations of 18 allocations in total (11.11%) from:
+    fdopendir
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dea6
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4d835
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4dac2
+      in /usr/lib/libc.so.6
+    0x7ff0e0d4e415
+      in /usr/lib/libc.so.6
+    main
+      at /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246.c:218
+      in /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246
+  and 6B from 12 other places
+
+1 temporary allocations of 1 allocations in total (100.00%) from
+pool
+  at /usr/src/debug/gcc/libstdc++-v3/libsupc++/eh_alloc.cc:123
+  in /usr/lib/libstdc++.so.6
+__static_initialization_and_destruction_0
+  at /usr/src/debug/gcc/libstdc++-v3/libsupc++/eh_alloc.cc:262
+_GLOBAL__sub_I_eh_alloc.cc
+  at /usr/src/debug/gcc/libstdc++-v3/libsupc++/eh_alloc.cc:338
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    0x7ff0e0e91f3d
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0e9202b
+      in /lib64/ld-linux-x86-64.so.2
+    0x7ff0e0ea9ce9
+      in /lib64/ld-linux-x86-64.so.2
+
+
+total runtime: 1.37s.
+calls to allocation functions: 181672 (132413/s)
+temporary memory allocations: 1365 (994/s)
+peak heap memory consumption: 40.50M
+peak RSS (including heaptrack overhead): 20.15M
+total memory leaked: 4.61K
