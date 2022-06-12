@@ -54,6 +54,8 @@ MBean, определяющий площадь получившейся фигу
 
     $ ./FlameGraph/flamegraph.pl flamegraph.data > flamegraph.svg
 
+![Flamegraph](./src/flamegraph.svg?raw=true "Flamegraph")
+
 4. After using strace [$ strace -f -T -tt -o straceLog.txt ./lab1aotN3246 --float-bin 1.5 ~/.config/] and piping the logfile into GitLab's strace-parser we wound out that all the data that was 'mmap()'ed was never 'munmap()'ed.
 >
     $ ./strace-parser src/straceLog.txt list-pids
