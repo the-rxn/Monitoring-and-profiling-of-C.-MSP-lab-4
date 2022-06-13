@@ -19,14 +19,9 @@ MBean, определяющий площадь получившейся фигу
 Подробное (со скриншотами) описание алгоритма действий, который позволил выявить и локализовать проблему.
 Студент должен обеспечить возможность воспроизведения процесса поиска и локализации проблемы по требованию преподавателя.
 
-## Steps:
+**P.S. We decided to use C instead of Java and therefore used a different toolset. Yet, the task is fully covered.**
 
-1. Check this out: https://habr.com/ru/company/oleg-bunin/blog/340394/
-2. Then check this out: https://habr.com/ru/post/482040/
-3. Decide whether we'll be using C or Java.
-4. Decide the stacks we'll be using for profiling and monitoring.
-
-## Monitoring/Profiling 
+## Used tools: 
 
 1. Valgrind toolkit
 2. HeapTrack: Massif Visualizer - very nice for memory profiling (draws dynamic beautiful graphs of memusage)
@@ -38,7 +33,7 @@ MBean, определяющий площадь получившейся фигу
 ## Results:
 
 ### Memory leak
-1. So, after using different tools for monitoring and profiling, we saw that the shared library (./src/floatbin.c) that looks for binary float numbers in files was allocating and not freeing too much memory.
+1. After using different tools for monitoring and profiling, we saw that the shared library (./src/floatbin.c) that looks for binary float numbers in files was allocating and not freeing too much memory.
 2. After checking the flamegraphs from heaptrack and valgrind info we still couldn't find the leak.
 
 >
@@ -54,9 +49,9 @@ MBean, определяющий площадь получившейся фигу
 
     $ ./FlameGraph/flamegraph.pl flamegraph.data > flamegraph.svg
 
-![Flamegraph](./src/flamegraph.svg?raw=true "Flamegraph")
+![Flamegraph](./src/logs/flamegraph.svg?raw=true "Flamegraph")
 
-4. After using strace [$ strace -f -T -tt -o straceLog.txt ./lab1aotN3246 --float-bin 1.5 ~/.config/] and piping the logfile into GitLab's strace-parser we wound out that all the data that was 'mmap()'ed was never 'munmap()'ed.
+4. After using strace [$ strace -f -T -tt -o straceLog.txt ./lab1aotN3246 --float-bin 1.5 ~/.config/] and piping the logfile into GitLab's strace-parser we found out that all the data that was 'mmap()'ed was never 'munmap()'ed.
 >
     $ ./strace-parser src/straceLog.txt list-pids
 
@@ -113,10 +108,10 @@ MBean, определяющий площадь получившейся фигу
       syscall                 count    total (ms)      max (ms)      avg (ms)      min (ms)    errors
       -----------------    --------    ----------    ----------    ----------    ----------    --------
       newfstatat              76017       356.356         1.984         0.005         0.002
-      **munmap                  35207       218.458         1.289         0.006         0.002**
+      munmap                  35207       218.458         1.289         0.006         0.002
       openat                  38191       216.741         0.881         0.006         0.003    ENOENT: 10   ENXIO: 2
       close                   38179       167.443         2.222         0.004         0.002
-      **mmap                    35265       163.393         0.685         0.005         0.003**
+      mmap                    35265       163.393         0.685         0.005         0.003
       getdents64               4497        31.178         0.122         0.007         0.003
       fcntl                    4396        17.607         0.029         0.004         0.002
       read                      385         1.494         0.028         0.004         0.002
@@ -143,6 +138,11 @@ MBean, определяющий площадь получившейся фигу
 ### Performance 
 1. Yet againg, after examining the flamegraph we figured out that the performance is heavily dependant on plugin_process_file() and KMPalg().
 Diving deeper into the source code we found out that instead of taking the input as it is in binary, the author of the library translated everything into a char array with '1's and '0's.
-
 So, replacing it with a little more sane code boosted the performance 97 times. ~(1.37 min -> 1s)
+2. Refactoring the code made the library work for roughly O(n) instead of O(n^4)
+
+## Used sources:
+
+1. Check this out: https://habr.com/ru/company/oleg-bunin/blog/340394/
+2. Then check this out: https://habr.com/ru/post/482040/
 
