@@ -1,0 +1,19 @@
+CMD: $ ./lab1aotN3246 
+Started at:14-06-2022 20:53:04.000171
+#------------
+Found options from 4 plugins:
+
+1.1 entropy:Target value of entropy
+1.2 offset-from:Start offset
+1.3 offset-to:End offset
+
+2.1 float-bin:looking for float numbers in file
+
+3.1 bug-float-bin:looking for float numbers in file
+
+4.1 ipv4-addr-bin:IPv4 address
+
+#------------
+Finished at:14-06-2022 20:53:04.000172
+Total files checked: 0
+Total 'FOUND' files: 0

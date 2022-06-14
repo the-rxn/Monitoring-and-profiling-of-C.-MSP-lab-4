@@ -41,11 +41,11 @@ static char * g_version = "1.0";
 static char * g_author = "Tsydypov A.O.";
 static char * g_group = "N3246";
 static char * g_lab_variant = "19";
-static char * log_divisor = "#------------";
+// static char * log_divisor = "#------------";
 // -------------------------------------------------------------------------------
 // Flags for multiple plugins
 // -------------------------------------------------------------------------------
-
+// static int L = 0;
 static int A = 0;
 static int O = 0;
 static int N = 0;
@@ -71,11 +71,13 @@ static struct option ** sorted_user_opts = NULL;
 static int * n_sorted_user_opts = NULL;
 
 // Loging
+/*
 void timestamp(FILE * );
 void getLogName(char * );
 void getStartLog(FILE * , int, char **);
 void getPluginsLog(FILE * );
 void getFilesLog(FILE *);
+*/
 
 // Plugin_process_file array
 static char ** longopt_name = NULL;
@@ -109,18 +111,21 @@ int main(int argc, char * argv[]) {
     char * DEBUG = getenv(DF);
     char * plugin_path_dir = NULL;
 
-    // Loging 
-    char logFileName[100] = "./logs/internal/fileFinder";
+    // Loging
+    /*
+    char logFileName[100] = "fileFinder";
     char end[5] = ".log";
     char trn[30] = "";
     getLogName(trn);
     strcat(logFileName, trn);
     strcat(logFileName, end);
 
+
     FILE *logFile = fopen(logFileName, "a");
 
     getStartLog(logFile, argc, argv);
     fflush(logFile);
+    */ 
         //Look for -P option 
     for (int i = 0; i < argc; ++i) {
         if (strcmp(argv[i], "-P") == 0) {
@@ -148,7 +153,7 @@ int main(int argc, char * argv[]) {
         app_help();
         goto FREE;
     }
-    getPluginsLog(logFile);
+    // getPluginsLog(logFile);
 
     if (!plugs_opts) fprintf(stdout, "WARNING: [main()] no long options supplied.\n");
 
@@ -209,6 +214,8 @@ int main(int argc, char * argv[]) {
         case 'N':
             N = 1;
             break;
+        // case 'L':
+            // L = 1;
         case 'v':
             app_info();
             goto FREE;
@@ -262,9 +269,11 @@ int main(int argc, char * argv[]) {
     }
     if (ppf_func_arr) free(ppf_func_arr);
     if (longopt_name) free(longopt_name);
+    /*
     getFilesLog(logFile);
     fflush(logFile);
-    fclose(logFile);
+    // fclose(logFile);
+    */
     return 0;
 }
 
@@ -427,8 +436,9 @@ int check_func(const char * fpath,
 /// Logging functions 
 ///
 
+/*
 void getPluginsLog(FILE * logFile_) {
-    // fprintf(logFile_, "\n%s\n", log_divisor);
+    fprintf(logFile_, "\n%s\n", log_divisor);
     fprintf(logFile_, "Found options from %d plugins:\n\n", n_plugs);
     if (n_plugs > 0) {
         // printf("\nAvailable long options:\n");
@@ -496,6 +506,9 @@ void getStartLog(FILE * logFile_, int argc, char ** argv){
   fprintf(logFile_, "\n%s\n", log_divisor);
 
 }
+
+*/ 
+
 // -------------------------------------------------------------------------------
 // Print help info
 // -------------------------------------------------------------------------------

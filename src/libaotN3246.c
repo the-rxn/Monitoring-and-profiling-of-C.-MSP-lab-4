@@ -38,9 +38,9 @@ static char * lib_name = "libaotN3246.so";
 static char * plugin_purpose = "Check if a file contains a specified IPv4 address";
 
 static char * plugin_author = "TEAMfromBIT";
-static char flag = 0;
-static char logFileName[64];
-FILE *logFile; 
+// static char flag = 0;
+// static char logFileName[64];
+// FILE *logFile; 
 static struct plugin_option long_options[] = {
     {
         {
@@ -67,6 +67,7 @@ static char * change_endianness(char * );
 //static char * convert_to_IPv4(char * );
 static int check(char * , const char * );
 
+/*
 //
 //  LOGGING FUNCTIONS
 //
@@ -100,6 +101,9 @@ void getFileCheckLog(const char * input_file, int result){
     fflush(logFile);
     // fprintf(stdout, "%ld. %s \n", counter, input_file);
 }
+
+*/ 
+
 //
 //  API functions
 //
@@ -404,9 +408,9 @@ int check(char * input_address, const char * input_file) {
                 printf("DEBUG: %s: Provided IPv4 address { %s } is FOUND in { %s } file", lib_name, ipv4_bytes, input_file);
             ret = 0;
         }
-        if(!flag) getLogName();
+        // if(!flag) getLogName();
         counter++;
-        getFileCheckLog(input_file, ret);
+        // getFileCheckLog(input_file, ret);
         // getFileCheckLog(input_file);
         // fclose(logFile);
         free(changed);
