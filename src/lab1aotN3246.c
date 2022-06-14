@@ -29,6 +29,9 @@
 
 #include "plugin_api.h"
 
+#include <time.h>
+
+#include <sys/time.h>
 // -------------------------------------------------------------------------------
 // App info
 // -------------------------------------------------------------------------------
@@ -38,7 +41,7 @@ static char * g_version = "1.0";
 static char * g_author = "Tsydypov A.O.";
 static char * g_group = "N3246";
 static char * g_lab_variant = "19";
-
+static char * log_divisor = "#------------";
 // -------------------------------------------------------------------------------
 // Flags for multiple plugins
 // -------------------------------------------------------------------------------
@@ -46,7 +49,8 @@ static char * g_lab_variant = "19";
 static int A = 0;
 static int O = 0;
 static int N = 0;
-
+static long int log_counter = 0;
+static long int log_counter_success = 0;
 // -------------------------------------------------------------------------------
 // API vars
 // -------------------------------------------------------------------------------
@@ -66,11 +70,19 @@ static int n_user_opts = 0;
 static struct option ** sorted_user_opts = NULL;
 static int * n_sorted_user_opts = NULL;
 
+// Loging
+void timestamp(FILE * );
+void getLogName(char * );
+void getStartLog(FILE * , int, char **);
+void getPluginsLog(FILE * );
+void getFilesLog(FILE *);
+
 // Plugin_process_file array
 static char ** longopt_name = NULL;
 static int n_longopt_name = 0;
 
 static void ** ppf_func_arr = NULL;
+
 // -------------------------------------------------------------------------------
 // Private functions
 // -------------------------------------------------------------------------------
@@ -97,7 +109,19 @@ int main(int argc, char * argv[]) {
     char * DEBUG = getenv(DF);
     char * plugin_path_dir = NULL;
 
-    //Look for -P option 
+    // Loging 
+    char logFileName[100] = "fileFinder";
+    char end[5] = ".log";
+    char trn[30] = "";
+    getLogName(trn);
+    strcat(logFileName, trn);
+    strcat(logFileName, end);
+
+    FILE *logFile = fopen(logFileName, "a");
+
+    getStartLog(logFile, argc, argv);
+    fflush(logFile);
+        //Look for -P option 
     for (int i = 0; i < argc; ++i) {
         if (strcmp(argv[i], "-P") == 0) {
             if (!(plugin_path_dir = (char * ) malloc(strlen(argv[i + 1] + 1)))) {
@@ -124,6 +148,7 @@ int main(int argc, char * argv[]) {
         app_help();
         goto FREE;
     }
+    getPluginsLog(logFile);
 
     if (!plugs_opts) fprintf(stdout, "WARNING: [main()] no long options supplied.\n");
 
@@ -220,7 +245,6 @@ int main(int argc, char * argv[]) {
         perror("nftw");
         goto FREE;
     }
-
     FREE:
         // for (int i = 0; i < n_plugs; i++)
             // if (plughandles[i]) dlclose(plughandles[i]);
@@ -238,7 +262,9 @@ int main(int argc, char * argv[]) {
     }
     if (ppf_func_arr) free(ppf_func_arr);
     if (longopt_name) free(longopt_name);
-
+    getFilesLog(logFile);
+    fflush(logFile);
+    fclose(logFile);
     return 0;
 }
 
@@ -346,7 +372,6 @@ int plug_info(const char * fpath,
     }
 
     if (DEBUG) fprintf(stdout, "DEBUG: [plug_info()]  Number of found working plugins: %d\n", n_plugs);
-
     return 0;
 }
 
@@ -358,7 +383,7 @@ int check_func(const char * fpath,
     const struct stat * sb, int typeflag, struct FTW * ftwbuf) {
     UNUSED(sb);
     UNUSED(ftwbuf);
-
+    log_counter++;
     if (typeflag == FTW_D || typeflag == FTW_DP || typeflag == FTW_DNR) return 0;
 
     char * DEBUG = getenv(DF);
@@ -389,12 +414,87 @@ int check_func(const char * fpath,
     }
 
     if (N) ret = !ret;
-
-    if (ret) fprintf(stdout, "%s\n", fpath);
+    
+    if (ret){
+        fprintf(stdout, "%s\n", fpath);
+        log_counter_success++;
+    }
 
     return 0;
 }
 
+///
+/// Logging functions 
+///
+
+void getPluginsLog(FILE * logFile_) {
+    fprintf(logFile_, "\n%s\n", log_divisor);
+    fprintf(logFile_, "Found options from %d plugins:\n\n", n_plugs);
+    if (n_plugs > 0) {
+        // printf("\nAvailable long options:\n");
+        for (int i = 0; i < n_plugs; ++i) {
+            void * func = dlsym(plughandles[i], "plugin_get_info");
+            struct plugin_info pi = {
+                0
+            };
+            pgi_func_t pgi_func = (pgi_func_t) func;
+            int ret = pgi_func( & pi);
+            if (ret < 0) fprintf(stderr, "ERROR: [app_help()] plugin_get_info failed\n");
+
+            // printf("Long options from plugin №%d:\n", i + 1);
+            for (size_t j = 0; j < pi.sup_opts_len; ++j) {
+                fprintf(logFile_, "%s:", pi.sup_opts[j].opt.name);
+                fprintf(logFile_, "%s\n", pi.sup_opts[j].opt_descr);
+            }
+        }
+    }
+    fprintf(logFile_, "%s\n", log_divisor);
+}
+
+void getLogName(char * trn_){
+  time_t rawtime;
+  struct tm * timeinfo;
+  
+  time(&rawtime);
+  timeinfo = localtime(&rawtime);
+  
+  sprintf(trn_, "%d_%d_%d_%d.%d", timeinfo->tm_mday,
+          timeinfo->tm_mon + 1, timeinfo->tm_year + 1900,
+          timeinfo->tm_hour, timeinfo->tm_min);
+}
+
+void timestamp(FILE * logFile_) {
+    //time_t rawtime;
+    struct timeval rawtime;
+    gettimeofday(&rawtime, NULL);
+    struct tm * t;
+    //time ( &rawtime );
+    t = localtime ( (time_t*)&rawtime.tv_sec );
+    fprintf(logFile_,"%02d-%02d-%d %02d:%02d:%02d.%06d",t->tm_mday,t->tm_mon+1,t->tm_year+1900,t->tm_hour,t->tm_min,t->tm_sec,(int)rawtime.tv_usec/1000);
+    return;
+}
+
+void getFilesLog(FILE * logFile_){
+    fprintf(logFile_, "Finished at:");
+    timestamp(logFile_);
+    fprintf(logFile_, "\nTotal files checked: %ld\n", log_counter);
+    fprintf(logFile_, "Total 'FOUND' files: %ld\n", log_counter_success);
+}
+
+void getStartLog(FILE * logFile_, int argc, char ** argv){
+  char command[120];
+  char preCommand[17] = "CMD: $ ";
+  fprintf(logFile_, "%s", preCommand);
+  for(int i = 0; i < argc; ++i){
+    strcat(command, argv[i]);
+    strcat(command, " ");
+  }
+  fprintf(logFile_, "%s\n", command);
+  fprintf(logFile_, "Started at:");
+  timestamp(logFile_);
+  fprintf(logFile_, "\n%s\n", log_divisor);
+
+}
 // -------------------------------------------------------------------------------
 // Print help info
 // -------------------------------------------------------------------------------

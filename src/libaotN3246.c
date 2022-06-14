@@ -20,6 +20,10 @@
 
 #include "plugin_api.h"
 
+#include <time.h>
+
+#include <sys/time.h>
+
 // A flag used to get verbose information 
 // on library execution.
 
@@ -34,7 +38,9 @@ static char * lib_name = "libaotN3246.so";
 static char * plugin_purpose = "Check if a file contains a specified IPv4 address";
 
 static char * plugin_author = "TEAMfromBIT";
-
+static char flag = 0;
+static char logFileName[64];
+FILE *logFile; 
 static struct plugin_option long_options[] = {
     {
         {
@@ -47,6 +53,7 @@ static struct plugin_option long_options[] = {
     },
 };
 
+static long int counter = 0;
 static int long_options_len = sizeof(long_options) / sizeof(long_options[0]);
 
 //gcc -fsanitize=address -g -o ipv4lib ipv4lib.c 
@@ -60,6 +67,39 @@ static char * change_endianness(char * );
 //static char * convert_to_IPv4(char * );
 static int check(char * , const char * );
 
+//
+//  LOGGING FUNCTIONS
+//
+void timestamp(FILE * logFile_) {
+    //time_t rawtime;
+    struct timeval rawtime;
+    gettimeofday(&rawtime, NULL);
+    struct tm * t;
+    //time ( &rawtime );
+    t = localtime ( (time_t*)&rawtime.tv_sec );
+    fprintf(logFile_,"%02d-%02d-%d %02d:%02d:%02d.%06d",t->tm_mday,t->tm_mon+1,t->tm_year+1900,t->tm_hour,t->tm_min,t->tm_sec,(int)rawtime.tv_usec/1000);
+}
+
+void getLogName(){
+  time_t rawtime;
+  struct tm * timeinfo;
+  
+  time(&rawtime);
+  timeinfo = localtime(&rawtime);
+  
+  sprintf(logFileName, "fileFinder%d_%d_%d_%d.%d.log", timeinfo->tm_mday,
+          timeinfo->tm_mon + 1, timeinfo->tm_year + 1900,
+          timeinfo->tm_hour, timeinfo->tm_min);
+  // printf("logFileName: %s\n", logFileName);
+  logFile = fopen(logFileName, "a");
+  flag = 1;
+}
+
+void getFileCheckLog(const char * input_file, int result){
+    fprintf(logFile, "%ld. %s %s\n", counter, input_file, (result==0) ? "CONTAINS" : "DOESN'T CONTAIN");
+    fflush(logFile);
+    // fprintf(stdout, "%ld. %s \n", counter, input_file);
+}
 //
 //  API functions
 //
@@ -329,8 +369,6 @@ int check(char * input_address, const char * input_file) {
             printf("DEBUG: %s: ipv4_bytes: %s, st.st_size = %ld\n", lib_name, ipv4_bytes, st.st_size);
             printf("DEBUG: %s: ipv4_bytes with changed endianness: %s\n", lib_name, changed);
         }
-/*
-*/
         char * last_needle = NULL;
         char * last_needle_swapped = NULL;
 
@@ -366,6 +404,11 @@ int check(char * input_address, const char * input_file) {
                 printf("DEBUG: %s: Provided IPv4 address { %s } is FOUND in { %s } file", lib_name, ipv4_bytes, input_file);
             ret = 0;
         }
+        if(!flag) getLogName();
+        counter++;
+        getFileCheckLog(input_file, ret);
+        // getFileCheckLog(input_file);
+        // fclose(logFile);
         free(changed);
         free(fileContents);
         free(ipv4_bytes);

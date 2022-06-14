@@ -141,6 +141,40 @@ Diving deeper into the source code we found out that instead of taking the input
 So, replacing it with a little more sane code boosted the performance 97 times. ~(1.37 min -> 1s)
 2. Refactoring the code made the library work for roughly O(n) instead of O(n^4)
 
+
+### Logging(internal):
+1. We have also implemented some logging functions that log the starting command, timestamp, all the processed files and some summary of each run. 
+2. The logging is done each run of the program.
+3. Logging is done both in the program and shared library.
+4. The example of internal logging:
+>
+    CMD: $ ./lab1aotN3246 --ipv4-addr-bin 127.0.0.1 /home/mertz/dev/uni/mispi/lab4/src/ 
+    Started at:14-06-2022 03:43:30.000163
+    #------------
+    1. /home/mertz/dev/uni/mispi/lab4/src/test-float-bin CONTAINS
+    2. /home/mertz/dev/uni/mispi/lab4/src/test DOESN'T CONTAIN
+    3. /home/mertz/dev/uni/mispi/lab4/src/1.txt DOESN'T CONTAIN
+        ....
+    217. /home/mertz/dev/uni/mispi/lab4/src/libaotN3246.so DOESN'T CONTAIN
+    218. /home/mertz/dev/uni/mispi/lab4/src/lab1aotN3246 DOESN'T CONTAIN
+    219. /home/mertz/dev/uni/mispi/lab4/src/fileFinder14_6_2022_3.43.log DOESN'T CONTAIN
+
+    #------------
+    Found options from 4 plugins:
+
+    entropy:Target value of entropy
+    offset-from:Start offset
+    offset-to:End offset
+    float-bin:looking for float numbers in file
+    bug-float-bin:looking for float numbers in file
+    ipv4-addr-bin:IPv4 address
+    #------------
+    Finished at:14-06-2022 03:43:30.000218
+    Total files checked: 246
+    Total 'FOUND' files: 1
+
+P.S. Total files checked also include directories.
+
 ## Used sources:
 
 1. Check this out: https://habr.com/ru/company/oleg-bunin/blog/340394/

@@ -12,6 +12,6 @@ lab1aotN3246: lab1aotN3246.c plugin_api.h
 	gcc $(CFLAGS) -o lab1aotN3246 lab1aotN3246.c -ldl -g
 
 libaotN3246.so: libaotN3246.c plugin_api.h
-	gcc $(CFLAGS) -shared -fPIC -o libaotN3246.so libaotN3246.c -ldl -lm
+	gcc $(CFLAGS) -shared -fPIC -o libaotN3246.so libaotN3246.c -ldl -lm -g
 
 
