@@ -440,12 +440,13 @@ void getPluginsLog(FILE * logFile_) {
             pgi_func_t pgi_func = (pgi_func_t) func;
             int ret = pgi_func( & pi);
             if (ret < 0) fprintf(stderr, "ERROR: [app_help()] plugin_get_info failed\n");
-
+            // fprintf(logFile_, "%d.", i+1);
             // printf("Long options from plugin №%d:\n", i + 1);
             for (size_t j = 0; j < pi.sup_opts_len; ++j) {
-                fprintf(logFile_, "%s:", pi.sup_opts[j].opt.name);
+                fprintf(logFile_, "%d.%ld %s:", i+1, j+1, pi.sup_opts[j].opt.name);
                 fprintf(logFile_, "%s\n", pi.sup_opts[j].opt_descr);
             }
+            fprintf(logFile_, "\n");
         }
     }
     fprintf(logFile_, "%s\n", log_divisor);
